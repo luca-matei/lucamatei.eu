@@ -21,10 +21,10 @@ function Header() {
             About Me
           </button>
           <button
-            className={`mx-2 px-4 py-2 ${activeTab === 'tech' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
-            onClick={() => setActiveTab('tech')}
+            className={`mx-2 px-4 py-2 ${activeTab === 'experience' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
+            onClick={() => setActiveTab('experience')}
           >
-            Tech Stack
+            Experience
           </button>
           {/* More tabs as needed */}
         </div>
