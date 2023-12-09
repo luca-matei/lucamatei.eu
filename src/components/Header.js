@@ -14,12 +14,14 @@ function Header() {
           >
             Home
           </button>
+          {/*
           <button
             className={`mx-2 px-4 py-2 ${activeTab === 'about' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
             onClick={() => setActiveTab('about')}
           >
             About Me
           </button>
+          */}
           <button
             className={`mx-2 px-4 py-2 ${activeTab === 'experience' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
             onClick={() => setActiveTab('experience')}

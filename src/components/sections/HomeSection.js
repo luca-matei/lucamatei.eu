@@ -53,8 +53,9 @@ function HomeSection() {
           </div>
           <div
               className="w-full md:w-1/2 p-8 flex flex-col justify-center border-t md:border-t-0 md:border-l border-gray-200">
-              <h2 className="mb-2 text-xl">Hi,</h2>
-              <p>I'm Luca, a 20 year old born in the lands of Eastern Europe. I love trains and wooden cabins.</p>
+              <h2 className="mb-2 text-2xl">Salut,</h2>
+              <p className="mb-2">I'm Luca, a 20-year-old programmer from the vibrant lands of Eastern Europe. My journey in programming began at 7, starting with coding math problems in Python and creating small browser games. Over the years, I've been on a continuous learning path, publishing multiple iterations of my websites and developing DiMa, a comprehensive project management tool. More about this journey can be found in the Experience tab.</p>
+              <p>At 18, I embraced independence and worked in retail, a period where I honed my interpersonal skills and rebuilt DiMa with a renewed vision. Almost a year later, I landed my first professional role in the tech industry. When I'm not coding, I'm an enthusiast of trains, a planner of my dream wooden cabin, and a proud caretaker of my three cats.</p>
           </div>
       </>
   );
