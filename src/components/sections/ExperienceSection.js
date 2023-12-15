@@ -60,14 +60,21 @@ const certificates = [
     issuerLogo: CourseraLogo,
     url: '',
     completed: false,
-    progressLabel: "7/9 Courses",
+    progressLabel: "9 Courses",
   },
   {
-    name: 'Google Cybersecurity',
+    name: 'Google IT Automation with Python',
     issuerLogo: CourseraLogo,
     url: '',
     completed: false,
-    progressLabel: "2/8 Courses",
+    progressLabel: "6 Courses",
+  },
+  {
+    name: 'IBM Machine Learning',
+    issuerLogo: CourseraLogo,
+    url: '',
+    completed: false,
+    progressLabel: "1/6 Courses",
   }
 ];
 
