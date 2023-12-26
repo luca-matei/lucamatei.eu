@@ -21,8 +21,8 @@ export default function WordCounter() {
     }, [text]);
 
     return (
-        <div>
-            <h2 className="text-xl font-semibold mb-2">Word Counter</h2>
+        <>
+            <h1 className="text-2xl font-bold mb-4">Word Counter</h1>
             <textarea
                 rows={4}
                 cols={50}
@@ -36,6 +36,6 @@ export default function WordCounter() {
                 <p>Sentence Count: {sentenceCount}</p>
                 <p>Character Count (with spaces): {characterCount}</p>
             </div>
-        </div>
+        </>
     );
 }

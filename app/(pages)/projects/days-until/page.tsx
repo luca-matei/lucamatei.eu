@@ -39,7 +39,7 @@ export default function Page() {
     }, [targetDate, targetTime]); // Recalculate when date or time changes
 
     return (
-        <div className="flex flex-col items-start p-4">
+        <>
             <h1 className="text-2xl font-bold mb-4">Days Until</h1>
             <div className="mb-4">
                 <div className="flex items-center">
@@ -64,6 +64,6 @@ export default function Page() {
                 <div>{seconds} seconds</div>
                 {days === 0 && hours === 0 && minutes === 0 && seconds === 0}
             </div>
-        </div>
+        </>
     );
 }
