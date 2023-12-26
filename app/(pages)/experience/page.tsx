@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 
 const projects = [
   {
@@ -25,11 +27,11 @@ function ProjectsList() {
           <p className="text-gray-700 text-base my-4">{project.description}</p>
           <div className="flex justify-start space-x-2">
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-              <i className="fab fa-github"></i>
+              <FontAwesomeIcon icon={faGithub} />
               <span className="ml-2">GitHub</span>
             </a>
             <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer" className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-              <i className="fab fa-gitlab"></i>
+              <FontAwesomeIcon icon={faGitlab} />
               <span className="ml-2">GitLab</span>
             </a>
           </div>
@@ -45,29 +47,33 @@ function ProjectsList() {
 
 const certificates = [
   {
-    name: 'IBM Machine Learning',
+    name: 'Machine Learning',
     issuerLogo: "https://assets.lucamatei.eu/images/ibm-logo.jpg",
+    issuerName: "IBM on Coursera",
     url: '',
     completed: false,
     progressLabel: "1/6 Courses",
   },
   {
-    name: 'Meta Back-End Developer',
+    name: 'Back-End Developer',
     issuerLogo: "https://assets.lucamatei.eu/images/meta-logo.png",
+    issuerName: "Meta on Coursera",
     url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/LX73JXQ3YQGK',
     completed: true,
     progressLabel: "9 Courses",
   },
   {
-    name: 'Meta Front-End Developer',
+    name: 'Front-End Developer',
     issuerLogo: "https://assets.lucamatei.eu/images/meta-logo.png",
+    issuerName: "Meta on Coursera",
     url: '',
     completed: false,
     progressLabel: "9 Courses",
   },
   {
-    name: 'Google IT Automation with Python',
+    name: 'IT Automation with Python',
     issuerLogo: "https://assets.lucamatei.eu/images/google-logo.jpg",
+    issuerName: "Google on Coursera",
     url: "https://www.coursera.org/account/accomplishments/specialization/certificate/4VYUGJ4GJJ7N",
     completed: true,
     progressLabel: "6 Courses",
@@ -75,6 +81,7 @@ const certificates = [
   {
     name: 'Python for Everybody',
     issuerLogo: "https://assets.lucamatei.eu/images/umich-logo.jpg",
+    issuerName: "University of Michigan on Coursera",
     url: '',
     completed: false,
     progressLabel: "5 Courses",
@@ -83,24 +90,33 @@ const certificates = [
 
 function CertificatesList() {
   return (
-      <div className="space-y-4">
-          {certificates.map((cert, index) => (
-              <a
-                  key={index}
-                  href={cert.completed ? cert.url : '#'}
-                  className={`flex items-center justify-between p-2 border border-gray-200 rounded-lg ${cert.completed ? 'bg-white hover:bg-gray-100' : 'bg-gray-100'} ${!cert.completed && 'pointer-events-none'}`}
-              >
-                  <div className="flex items-center">
-                      <img src={cert.issuerLogo} alt={`${cert.name} Logo`}
-                           className={`h-10 w-10 mr-4 ${!cert.completed && 'opacity-50'} rounded`}/>
-                      <span className={`truncate ${!cert.completed && 'opacity-50'}`}>{cert.name}</span>
-                  </div>
-                  <span className={`ml-auto text-xs truncate ${!cert.completed ? 'text-gray-500' : 'text-blue-600'}`}>
-            {cert.progressLabel}
-          </span>
-              </a>
-          ))}
-      </div>
+    <div className="space-y-4">
+      {certificates.map((cert, index) => (
+        <a
+          key={index}
+          href={cert.completed ? cert.url : '#'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center justify-start p-2 border border-gray-200 rounded-lg ${cert.completed ? 'bg-white hover:bg-gray-100' : 'bg-gray-100'} ${!cert.completed && 'pointer-events-none'}`}
+        >
+          {/* Logo on the left */}
+          <img
+            src={cert.issuerLogo}
+            alt={`${cert.name} Logo`}
+            className={`h-10 w-10 mr-4 ${!cert.completed && 'opacity-50'} rounded`}
+          />
+
+          {/* Text in a column on the right */}
+          <div className="flex-1 min-w-0"> {/* Flex item to hold text */}
+            <span className={`block truncate ${!cert.completed && 'opacity-50'}`}>{cert.name}</span>
+            <span className={`block text-xs ${!cert.completed && 'opacity-50'}`}>by {cert.issuerName}</span>
+            <span className={`block text-xs pt-1 ${!cert.completed ? 'text-gray-500 opacity-50' : 'text-green-600'}`}>
+              {cert.progressLabel}
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
   );
 }
 
@@ -255,7 +271,7 @@ function TechStackList() {
   );
 }
 
-function ExperienceSection() {
+export default function Page() {
   return (
       <>
         <div
@@ -283,5 +299,3 @@ function ExperienceSection() {
       </>
   );
 }
-
-export default ExperienceSection
