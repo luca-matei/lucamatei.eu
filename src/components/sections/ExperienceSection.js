@@ -1,8 +1,4 @@
 import React from 'react';
-import CourseraLogo from '../../assets/img/coursera-logo.jpg';
-import GetitAILogo from '../../assets/img/getitai-logo.jpg';
-import PlaceholderLogo from '../../assets/img/placeholder-logo.png';
-
 
 const projects = [
   {
@@ -50,28 +46,28 @@ function ProjectsList() {
 const certificates = [
   {
     name: 'Meta Back-End Developer',
-    issuerLogo: CourseraLogo,
+    issuerLogo: "https://assets.lucamatei.eu/images/meta-logo.png",
     url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/LX73JXQ3YQGK',
     completed: true,
     progressLabel: "9 Courses",
   },
   {
     name: 'Meta Front-End Developer',
-    issuerLogo: CourseraLogo,
+    issuerLogo: "https://assets.lucamatei.eu/images/meta-logo.png",
     url: '',
     completed: false,
     progressLabel: "9 Courses",
   },
   {
     name: 'Google IT Automation with Python',
-    issuerLogo: CourseraLogo,
+    issuerLogo: "https://assets.lucamatei.eu/images/google-logo.jpg",
     url: '',
     completed: false,
     progressLabel: "6 Courses",
   },
   {
     name: 'IBM Machine Learning',
-    issuerLogo: CourseraLogo,
+    issuerLogo: "https://assets.lucamatei.eu/images/ibm-logo.jpg",
     url: '',
     completed: false,
     progressLabel: "1/6 Courses",
@@ -104,7 +100,7 @@ function CertificatesList() {
 const workplaces = [
     {
     companyName: "GetitAI",
-    companyLogo: GetitAILogo,
+    companyLogo: "https://assets.lucamatei.eu/images/getitai-logo.jpg",
     role: "Full Stack Developer",
     startDate: "Oct 2023",
     endDate: "Present",
@@ -113,7 +109,7 @@ const workplaces = [
   },
   {
     companyName: "Signed NDA",
-    companyLogo: PlaceholderLogo,
+    companyLogo: "https://assets.lucamatei.eu/images/placeholder-logo.png",
     role: "Full Stack Developer",
     startDate: "July 2023",
     endDate: "Present",
@@ -127,7 +123,7 @@ const workplaces = [
   },
   {
     companyName: "Freelancer",
-    companyLogo: PlaceholderLogo,
+    companyLogo: "https://assets.lucamatei.eu/images/placeholder-logo.png",
     role: "Full Stack Developer",
     startDate: "June 2023",
     endDate: "Present",
