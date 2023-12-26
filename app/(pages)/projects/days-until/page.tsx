@@ -62,7 +62,7 @@ export default function Page() {
                 <div>{hours} hours</div>
                 <div>{minutes} minutes</div>
                 <div>{seconds} seconds</div>
-                {days === 0 && hours === 0 && minutes === 0 && seconds === 0 && "Time's up!"}
+                {days === 0 && hours === 0 && minutes === 0 && seconds === 0}
             </div>
         </div>
     );
