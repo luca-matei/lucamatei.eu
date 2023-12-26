@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           style={{ backgroundImage: `url('/images/bg.gif')`, backdropFilter: "blur(4px)" }}
         >
           <div className="flex flex-col md:flex-row md:max-w-4xl w-full mx-auto my-10 bg-white rounded-lg shadow-md overflow-hidden text-gray-600">
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <header className="border-b border-gray-200">
                 <nav className="flex justify-center py-2">
                   <div className="flex justify-center w-full max-w-md mx-auto">
