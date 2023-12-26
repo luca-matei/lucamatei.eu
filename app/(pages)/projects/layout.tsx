@@ -12,6 +12,7 @@ interface Project {
 const projects: Project[] = [
   { name: 'QR Generator', category: 'Apps', url: 'https://example.com/qr-generator' },
   { name: 'URL Shortener', category: 'Apps', url: 'https://example.com/url-shortener' },
+  { name: 'Password Generator', category: 'Tools', url: '/projects/password-generator' },
   { name: 'Days Until', category: 'Tools', url: '/projects/days-until' },
   { name: 'Word Counter', category: 'Tools', url: '/projects/word-counter' },
   { name: 'BMI Calculator', category: 'Tools', url: '/projects/bmi-calculator' },
@@ -72,7 +73,7 @@ const ProjectLayout = ({ children }: ProjectLayoutProps) => {
       </aside>
 
       {/* Main content area */}
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-8 w-max-full">
         {children}
       </main>
     </div>

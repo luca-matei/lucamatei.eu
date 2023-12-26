@@ -63,7 +63,7 @@ export default function Page() {
       )}
       {/* Displaying BMI ranges */}
       <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-2">BMI Categories:</h2>
+        <h2 className="text-xl font-semibold mb-2">BMI Categories</h2>
         <ul>
           <li>Underweight: less than 18.5</li>
           <li>Normal weight: 18.5 – 24.9</li>
