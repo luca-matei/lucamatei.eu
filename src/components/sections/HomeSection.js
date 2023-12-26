@@ -43,9 +43,9 @@ function HomeSection() {
                       </li>
                   </ul>
                   <div className="flex items-center space-x-4">
-                      <a href="https://assets.lucamatei.eu/images/files/cv-luca-matei-en.pdf" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400">Download
+                      <a href="https://assets.lucamatei.eu/files/cv-luca-matei-en.pdf" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-400">Download
                           CV</a>
-                      <span className="text-sm">€25 per hour</span>
+                      <span className="text-sm">€30 per hour</span>
                   </div>
               </div>
           </div>

@@ -45,6 +45,13 @@ function ProjectsList() {
 
 const certificates = [
   {
+    name: 'IBM Machine Learning',
+    issuerLogo: "https://assets.lucamatei.eu/images/ibm-logo.jpg",
+    url: '',
+    completed: false,
+    progressLabel: "1/6 Courses",
+  },
+  {
     name: 'Meta Back-End Developer',
     issuerLogo: "https://assets.lucamatei.eu/images/meta-logo.png",
     url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/LX73JXQ3YQGK',
@@ -61,17 +68,17 @@ const certificates = [
   {
     name: 'Google IT Automation with Python',
     issuerLogo: "https://assets.lucamatei.eu/images/google-logo.jpg",
-    url: '',
-    completed: false,
+    url: "https://www.coursera.org/account/accomplishments/specialization/certificate/4VYUGJ4GJJ7N",
+    completed: true,
     progressLabel: "6 Courses",
   },
   {
-    name: 'IBM Machine Learning',
-    issuerLogo: "https://assets.lucamatei.eu/images/ibm-logo.jpg",
+    name: 'Python for Everybody',
+    issuerLogo: "https://assets.lucamatei.eu/images/umich-logo.jpg",
     url: '',
     completed: false,
-    progressLabel: "1/6 Courses",
-  }
+    progressLabel: "5 Courses",
+  },
 ];
 
 function CertificatesList() {
