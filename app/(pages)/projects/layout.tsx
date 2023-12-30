@@ -10,7 +10,7 @@ interface Project {
 
 // Define your project data
 const projects: Project[] = [
-  { name: 'QR Generator', category: 'Apps', url: 'https://example.com/qr-generator' },
+  { name: 'QR Generator', category: 'Apps', url: '/projects/qr-generator' },
   { name: 'URL Shortener', category: 'Apps', url: 'https://example.com/url-shortener' },
   { name: 'Password Generator', category: 'Tools', url: '/projects/password-generator' },
   { name: 'Days Until', category: 'Tools', url: '/projects/days-until' },
