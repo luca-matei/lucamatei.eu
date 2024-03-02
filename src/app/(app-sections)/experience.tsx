@@ -2,16 +2,6 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 
 const workplaces = [
   {
-    period: 'Oct 2023 - Present',
-    company: 'getitAI, Inc.',
-    title: 'Full Stack Engineer (Contract)',
-    bullets: [
-      "Contributed to the development and enhancement of the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, optimizing storage connections, and improving search algorithms.",
-      "Assisted in the onboarding process for new team members, ensuring a smooth integration into our project environment.",
-      "Implemented a versatile global component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.",
-    ],
-  },
-  {
     period: 'Jul 2023 - Present',
     company: 'Signed NDA',
     title: 'Full Stack Engineer (Contract)',
@@ -33,29 +23,9 @@ const workplaces = [
 ]
 
 const features = [
-  {
-    name: 'Invite team members',
-    description: 'Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.',
-  },
-  { name: 'List view', description: 'Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.' },
-  {
-    name: 'Keyboard shortcuts',
-    description: 'In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.',
-  },
-  {
-    name: 'Calendars',
-    description: 'Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi fugiat sequi.',
-  },
-  { name: 'Notifications', description: 'Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.' },
-  { name: 'Boards', description: 'Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.' },
-  {
-    name: 'Reporting',
-    description: 'Eos laudantium repellat sed architecto earum unde incidunt. Illum sit dolores voluptatem.',
-  },
-  {
-    name: 'Mobile app',
-    description: 'Nulla est saepe accusamus nostrum est est. Fugit voluptatum omnis quidem voluptatem.',
-  },
+  { description: 'Contributed to the development and enhancement of the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, optimizing storage connections, and improving search algorithms.' },
+  { description: 'Implemented a versatile global component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.' },
+  { description: 'Assisted in the onboarding process for new team members, ensuring a smooth integration into our project environment.' },
 ]
 
 export default function Experience() {
