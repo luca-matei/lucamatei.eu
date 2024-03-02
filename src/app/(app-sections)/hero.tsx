@@ -31,9 +31,7 @@ export default function Hero() {
                     <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Hi. I&apos;m
                         Luca</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                        sunt amet
-                        fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
+                        I design and implement complex systems, having a proven track record of developing and enhancing SaaS platforms with Python and JavaScript frameworks in Linux environments.
                     </p>
                     <div className="mt-10 flex items-center gap-x-6">
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
