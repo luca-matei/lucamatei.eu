@@ -4,41 +4,25 @@ const tiers = [
   {
     name: 'Remote / Hybrid',
     id: 'tier-hobby',
-    href: '#',
     priceMonthly: '€25',
-    description: 'Modi dolorem expedita deleniti. Corporis iste qui inventore pariatur adipisci vitae.',
-    features: [
-        '5 products',
-        'Up to 1,000 subscribers',
-        'Basic analytics',
-        '48-hour support response time'
-    ],
+    description: 'Base rate for any remote or hybrid work.',
   },
   {
     name: 'On-site',
     id: 'tier-team',
-    href: '#',
     priceMonthly: '€35',
-    description: 'Explicabo quo fugit vel facere ullam corrupti non dolores. Expedita eius sit sequi.',
-    features: [
-      'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
-      '1-hour, dedicated support response time',
-      'Marketing automations',
-    ],
+    description: 'We all know commuting takes valuable time.',
   },
 ]
 
 export function Fees() {
     return (
-        <div className="isolate overflow-hidden bg-gray-900 mb-24 sm:mb-32">
-            <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
+        <div id="fees" className="isolate overflow-hidden bg-gray-900 mb-24 sm:mb-32">
+            <div className="mx-auto max-w-7xl px-6 pb-64 pt-24 text-center sm:pt-32 lg:px-8">
                 <div className="mx-auto max-w-4xl">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
+                    <h2 className="text-base font-semibold leading-7 text-indigo-400">Hourly Rates</h2>
                     <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                        The right price for you, <br className="hidden sm:inline lg:hidden"/>
-                        whoever you are
+                        The right price for you
                     </p>
                 </div>
                 <div className="relative mt-6">
@@ -62,7 +46,7 @@ export function Fees() {
                 </div>
             </div>
             <div className="flow-root bg-white pb-[1px]">
-                <div className="-mt-80">
+                <div className="-mt-40">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
                             {tiers.map((tier) => (
@@ -81,15 +65,6 @@ export function Fees() {
                                                 className="text-base font-semibold leading-7 text-gray-600">/hour</span>
                                         </div>
                                         <p className="mt-6 text-base leading-7 text-gray-600">{tier.description}</p>
-                                        <ul role="list" className="mt-10 space-y-4 text-sm leading-6 text-gray-600">
-                                            {tier.features.map((feature) => (
-                                                <li key={feature} className="flex gap-x-3">
-                                                    <CheckIcon className="h-6 w-5 flex-none text-indigo-600"
-                                                               aria-hidden="true"/>
-                                                    {feature}
-                                                </li>
-                                            ))}
-                                        </ul>
                                     </div>
                                 </div>
                             ))}
@@ -103,10 +78,10 @@ export function Fees() {
                                     </p>
                                 </div>
                                 <a
-                                    href="#"
+                                    href="#contact"
                                     className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
-                                    Buy discounted license <span aria-hidden="true">&rarr;</span>
+                                    Let's Talk <span aria-hidden="true">&rarr;</span>
                                 </a>
                             </div>
                         </div>

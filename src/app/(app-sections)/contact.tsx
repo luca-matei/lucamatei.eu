@@ -2,11 +2,12 @@ import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline
 
 export default function Contact() {
   return (
-    <div className="relative isolate">
+    <div id="contact" className="relative isolate">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+        <div className="flex flex-col relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+          <div className="grow mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+            <div
+                className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -17,7 +18,7 @@ export default function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
-                  <MapPinIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <MapPinIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   Bucharest, Romania
@@ -26,7 +27,7 @@ export default function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
-                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="tel:+40 771 344 046">
@@ -37,7 +38,7 @@ export default function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
-                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
+                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="mailto:hello@lucamatei.eu">
@@ -47,6 +48,9 @@ export default function Contact() {
               </div>
             </dl>
           </div>
+          <p className="text-xs leading-5 text-gray-500">
+            &copy; 2024 Luca Matei. All rights reserved.
+          </p>
         </div>
         <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
           <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">

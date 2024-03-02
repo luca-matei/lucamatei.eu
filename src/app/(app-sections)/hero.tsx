@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-  <div className="relative isolate pt-14">
+  <div id="home" className="relative isolate pt-14">
     <svg
       className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
       aria-hidden="true"
@@ -34,7 +34,7 @@ export default function Hero() {
             I design and implement complex systems, having a proven track record of developing and enhancing SaaS platforms with Python and JavaScript frameworks in Linux environments.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a href="#experience" className="text-sm font-semibold leading-6 text-gray-900">
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>

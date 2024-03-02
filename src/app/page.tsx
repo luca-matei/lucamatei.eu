@@ -14,6 +14,7 @@ import Education from "@/app/(app-sections)/education";
 const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Fees', href: '#fees' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -91,14 +92,6 @@ export default function Home() {
       <Education/>
       <Projects/>
       <Contact/>
-
-      <footer>
-        <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 mt-8 md:mt-0">
-          <p className="text-center text-xs leading-5 text-gray-500">
-            &copy; 2024 Luca Matei. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </>
   )
 }
