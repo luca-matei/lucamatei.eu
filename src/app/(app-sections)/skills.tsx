@@ -2,19 +2,19 @@ const features = [
     {
       name: 'Python',
       description:
-        "I've been writing Python code since version 3.2 was released in 2011. I use it in scripting, games, web development, automations and recently in LLM projects.",
+        "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models.",
       tags: ['uwsgi', 'asyncio', 'openai', 'unittest', 'httpx', 'lxml', 'black'],
     },
     {
       name: 'Linux',
       description:
-        'I use Debian since my first computer from basic server management to building networks, managing services and troubleshooting systems. I host my projects on self-managed VPSes.',
+        'Since getting my first computer, I\'ve used Debian for everything from setting up servers and building networks to managing services and fixing system issues. I host my projects on VPSes that I manage myself.',
       tags: ['debian', 'openssh', 'qemu', 'nftables', 'nfs', 'bind9', 'isc-dhcp-server', 'dnsmasq', 'bash'],
     },
     {
       name: 'Backend',
       description:
-        'I work with ASGI REST APIs to power SaaS platforms on a daily basis. In 2020 I built a framework on top of a uWSGI server to serve the backend of multiple presentation websites.',
+        'I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites.',
       tags: ['fastapi', 'postgresql', 'redis', 'celery', 'dramatiq', 'supabase', 'sqlalchemy', 'pydantic'],
     },
     {
@@ -45,8 +45,7 @@ export default function Skills() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills I've Gained</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Here's what I've learned in 13 years of writing code and what I brought into my recent 6 months of professional
-            work.
+              Here's the knowledge I've gained from 13 years of coding and how I've applied it in my last six months of professional experience.
             </p>
           </div>
         </div>

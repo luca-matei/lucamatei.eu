@@ -1,20 +1,25 @@
 import { LifebuoyIcon, NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong, faBrain, faCodeBranch, faServer} from "@fortawesome/free-solid-svg-icons";
 
 const cards = [
   {
     name: 'Personal AI Saas Platform',
-    description: 'A platform that makes your life easier to manage.',
-    icon: PhoneIcon,
+    description: 'A NextJS and Python platform that makes your life easier to manage by combining daily tasks with AI analysis and recommendations.',
+    icon: faBrain,
+    href: "https://github.com/luca-matei/digital-marmot-platform-app",
   },
   {
     name: 'DevOps Automations Tool',
-    description: 'Tool to manage networks, servers and services on a home or small cloud.',
-    icon: LifebuoyIcon,
+    description: 'Automated tool to manage networks, servers and services on a home network or small cloud from a Python API based app.',
+    icon: faCodeBranch,
+    href: "https://github.com/luca-matei/",
   },
   {
     name: 'WSGI Web Framework',
     description: 'Backend framework written in Python for presentation websites. Include a YAML-based CMS and a CSS framework similar to Tailwind CSS.',
-    icon: NewspaperIcon,
+    icon: faServer,
+    href: "https://github.com/luca-matei/",
   },
 ]
 
@@ -50,14 +55,27 @@ export default function Example() {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             I love building things, and what I love more, is to make use of them by people finding them useful.
           </p>
+          <div className="mt-4 flex items-center gap-x-6">
+            <a href="https://github.com/luca-matei/" className="font-semibold leading-6 text-gray-300 hover:text-white">
+              Learn more
+              <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
+            </a>
+          </div>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+        <div
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
           {cards.map((card) => (
             <div key={card.name} className="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10">
-              <card.icon className="h-7 w-5 flex-none text-indigo-400" aria-hidden="true" />
+              <FontAwesomeIcon icon={card.icon} className="h-7 w-5 flex-none text-indigo-400" aria-hidden="true"/>
               <div className="text-base leading-7">
                 <h3 className="font-semibold text-white">{card.name}</h3>
                 <p className="mt-2 text-gray-300">{card.description}</p>
+                <div className="mt-4 flex items-center gap-x-6">
+                  <a href={card.href} className="text-sm font-semibold leading-6 text-gray-300 hover:text-white">
+                    Learn more
+                    <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
