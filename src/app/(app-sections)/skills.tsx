@@ -29,12 +29,18 @@ const features = [
         'I can set up and maintain linux, web and database servers and containers with robust load balancing. I have experience in setting up CI/CD pipelines and monitors.',
       tags: ['railway', 'github-actions', 'bitbucket-pipelines', 'hetzner', 'haproxy', 'pgbouncer', 'git', 'docker', 'prometheus', 'grafana', 'sentry', 'supervisor'],
     },
+    {
+      name: 'Open Source',
+      description:
+        "I have contributed to Pydantic and I'm planning on taking more open-source work. All my personal projects are open sourced on my Github.",
+      tags: ['pydantic', 'llms', 'automations', 'saas', 'tools'],
+    },
 ]
 
 export default function Skills() {
   return (
     <>
-      <div id="experience" className="pt-24 sm:pt-32 lg:pt-40">
+      <div className="pt-24 sm:pt-32 lg:pt-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills I've Gained</h2>

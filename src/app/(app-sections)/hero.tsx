@@ -1,3 +1,6 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
+
 export default function Hero() {
   return (
   <div id="home" className="relative isolate pt-14">
@@ -35,7 +38,8 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a href="#experience" className="text-sm font-semibold leading-6 text-gray-900">
-              Learn more <span aria-hidden="true">→</span>
+              Learn more
+                <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
             </a>
           </div>
       </div>

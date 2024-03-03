@@ -1,12 +1,9 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
-
 const statuses = {
   Complete: 'text-green-700 bg-green-50 ring-green-600/20',
   'In progress': 'text-gray-600 bg-gray-50 ring-gray-500/10',
   Archived: 'text-yellow-800 bg-yellow-50 ring-yellow-600/20',
 }
+
 const projects = [
   {
     id: 1,
@@ -61,14 +58,16 @@ function classNames(...classes) {
 
 export default function Education() {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto max-w-2xl lg:mx-0">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Courses & Certifications</h2>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-          accusamus quisquam.
-        </p>
+    <div className="py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Courses & Certifications</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            I value learning and I've made it a habit to do it on a daily basis.
+          </p>
+        </div>
       </div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="mx-auto max-w-2xl lg:max-w-none lg:mx-0">
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <ul role="list" className="divide-y divide-gray-100">
@@ -145,6 +144,7 @@ export default function Education() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   )
 }

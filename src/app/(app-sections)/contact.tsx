@@ -1,4 +1,6 @@
-import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone, faMapPin } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 export default function Contact() {
   return (
@@ -9,16 +11,15 @@ export default function Contact() {
             <div
                 className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt
-              integer elementum id sem. Arcu sed malesuada et magna.
+              Write me if you believe we can work together or if you have any questions.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
-                  <MapPinIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
+                  <FontAwesomeIcon icon={faMapPin} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   Bucharest, Romania
@@ -27,7 +28,7 @@ export default function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Telephone</span>
-                  <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
+                  <FontAwesomeIcon icon={faPhone} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="tel:+40 771 344 046">
@@ -38,13 +39,24 @@ export default function Contact() {
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
-                  <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true"/>
+                  <FontAwesomeIcon icon={faEnvelope} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="mailto:hello@lucamatei.eu">
                     hello@lucamatei.eu
                   </a>
                 </dd>
+              </div>
+              <div className="flex items-center space-x-4 text-gray-400">
+                <a href="https://t.me/your-username" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTelegram} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
+                </a>
+                <a href="https://www.linkedin.com/your-profile" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
+                </a>
+                <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faGithub} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
+                </a>
               </div>
             </dl>
           </div>

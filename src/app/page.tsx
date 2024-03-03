@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon, XCircleIcon } from '@heroicons/react/24/outline'
-import {Fees} from "@/app/(app-sections)/fees";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Contact from "@/app/(app-sections)/contact";
 import Hero from "@/app/(app-sections)/hero";
 import Skills from "@/app/(app-sections)/skills";
@@ -14,7 +13,6 @@ import Education from "@/app/(app-sections)/education";
 const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Fees', href: '#fees' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -88,9 +86,8 @@ export default function Home() {
       <Hero/>
       <Skills/>
       <Experience/>
-      <Fees/>
-      <Education/>
       <Projects/>
+      <Education/>
       <Contact/>
     </>
   )
