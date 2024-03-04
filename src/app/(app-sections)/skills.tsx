@@ -20,19 +20,19 @@ const features = [
     {
       name: 'Frontend',
       description:
-        "While I'm more focused on backend, I can build user interfaces and wire components to the backend. In 2020 I built a CSS framework from the ground up to style my websites in a manner similar to what Tailwind CSS has to offer.",
+        "I mainly work on backend development, but I'm also good at making user interfaces and connecting them to the backend. In 2020, I built a CSS framework from the ground up to give websites a look similar to what you get with Tailwind CSS.",
       tags: ['nextjs', 'react', 'typescript', 'javascript', 'tailwindcss', 'bootstrap', 'material', 'sass'],
     },
     {
       name: 'DevOps',
       description:
-        'I can set up and maintain linux, web and database servers and containers with robust load balancing. I have experience in setting up CI/CD pipelines and monitors.',
+        'I can install and take care of Linux, web, and database servers, along with containers, making sure they handle traffic smoothly. I\'ve also set up systems for continuous integration and delivery, as well as monitoring tools.',
       tags: ['railway', 'github-actions', 'bitbucket-pipelines', 'hetzner', 'haproxy', 'pgbouncer', 'git', 'docker', 'prometheus', 'grafana', 'sentry', 'supervisor'],
     },
     {
       name: 'Open Source',
       description:
-        "I have contributed to Pydantic and I'm planning on taking more open-source work. All my personal projects are open sourced on my Github.",
+        "I've helped improve Pydantic and I'm looking to do more work on open-source projects. You can find all my personal projects available for anyone to see on my GitHub.",
       tags: ['pydantic', 'llms', 'automations', 'saas', 'tools'],
     },
 ]
