@@ -1,5 +1,7 @@
-import { NextResponse, NextRequest } from 'next/server'
-const nodemailer = require('nodemailer');
+import { NextResponse } from 'next/server'
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(request) {
     const formData = await request.formData();
@@ -26,43 +28,26 @@ export async function POST(request) {
         return NextResponse.json({ message: "Message is required and must be between 8 and 4096 characters." }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: process.env.NODEMAILER_SENDER,
-          pass: process.env.NODEMAILER_PASSWORD,
-          },
-    });
+    const msg = {
+        to: process.env.SENDGRID_RECEIVER,
+        from: process.env.SENDGRID_SENDER,
+        subject: `Website activity from ${email}`,
+        html: `
+        <p>Name: ${name} </p>
+        <p>Email: ${email} </p>
+        <p>Phone: ${phone} </p>
+        <p>Message: ${message} </p>
+        `,
+    };
 
     try {
-        const mailData = {
-            from: process.env.NODEMAILER_SENDER,
-            to: process.env.NODEMAILER_RECEIVER,
-            replyTo: email,
-            subject: `Website activity from ${email}`,
-            html: `
-            <p>Name: ${name} </p>
-            <p>Email: ${email} </p>
-            <p>Phone: ${phone} </p>
-            <p>Message: ${message} </p>
-            `,
-        }
-
-        await new Promise((resolve, reject) => {
-            transporter.sendMail(mailData, (err, info) => {
-              if (err) {
-                console.error(err);
-                reject(err);
-              } else {
-                resolve(info);
-              }
-            });
-        })
-
-        return NextResponse.json({ message: "Success: email was sent" })
-
+        await sgMail.send(msg);
+        return NextResponse.json({ message: "Success: email was sent" });
     } catch (error) {
-        console.log(error)
-        NextResponse.status(500).json({ message: "COULD NOT SEND MESSAGE" })
+        console.error(error);
+        if (error.response) {
+            console.error(error.response.body)
+        }
+        return NextResponse.json({ message: "COULD NOT SEND MESSAGE" }, { status: 500 });
     }
 }
