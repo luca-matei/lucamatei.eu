@@ -35,8 +35,7 @@ export async function POST(request) {
     });
 
     try {
-
-        const mail = await transporter.sendMail({
+        const mailData = {
             from: process.env.NODEMAILER_SENDER,
             to: process.env.NODEMAILER_RECEIVER,
             replyTo: email,
@@ -47,6 +46,17 @@ export async function POST(request) {
             <p>Phone: ${phone} </p>
             <p>Message: ${message} </p>
             `,
+        }
+
+        await new Promise((resolve, reject) => {
+            transporter.sendMail(mailData, (err, info) => {
+              if (err) {
+                console.error(err);
+                reject(err);
+              } else {
+                resolve(info);
+              }
+            });
         })
 
         return NextResponse.json({ message: "Success: email was sent" })
