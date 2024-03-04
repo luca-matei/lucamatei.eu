@@ -43,7 +43,7 @@ export default function Experience() {
         </div>
       </div>
       {workplaces.map((workplace, index) => (
-      <div className={index !== workplaces.length - 1 ? "pb-24 sm:pb-32" : ""}>
+      <div key={index} className={index !== workplaces.length - 1 ? "pb-24 sm:pb-32" : ""}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
               className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -55,8 +55,8 @@ export default function Experience() {
               <p className="mt-4 text-base leading-7 text-gray-600">{workplace.description}</p>
             </div>
             <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
-                {workplace.bullets.map((bullet) => (
-                  <div className="relative pl-9">
+                {workplace.bullets.map((bullet, index2) => (
+                  <div key={index + 5 * index2} className="relative pl-9">
                     <dt>
                       <FontAwesomeIcon icon={faCheck} className="absolute left-0 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
                       {bullet}

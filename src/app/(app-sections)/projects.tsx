@@ -1,4 +1,3 @@
-import { LifebuoyIcon, NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong, faBrain, faCodeBranch, faServer} from "@fortawesome/free-solid-svg-icons";
 

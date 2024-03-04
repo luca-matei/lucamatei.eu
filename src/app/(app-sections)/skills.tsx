@@ -59,6 +59,7 @@ export default function Skills() {
               <div className="flex flex-row flex-wrap">
                 {feature.tags.map((tag) => (
                   <span
+                    key={feature.name + ' ' + tag}
                     className="relative z-10 rounded-full bg-gray-50 px-2 py-1 mt-2 mr-2 text-sm text-gray-500 hover:bg-gray-100"
                   >
                     #{tag}
