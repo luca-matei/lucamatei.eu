@@ -25,11 +25,13 @@ const cards = [
 export default function Example() {
   return (
     <div id="projects" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      {/*
       <img
         src="./projects.jpg"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
       />
+      */}
       <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
         <div
           className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
@@ -52,7 +54,7 @@ export default function Example() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Things I&apos;ve Created</h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            I love building things, and what I love more, is to make use of them by people finding them useful.
+            I really enjoy making things, and even more than that, I love it when people actually use the programs I write.
           </p>
           <div className="mt-4 flex items-center gap-x-6">
             <a href="https://github.com/luca-matei/" className="font-semibold leading-6 text-gray-300 hover:text-white">

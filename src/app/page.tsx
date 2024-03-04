@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
+import { useState, Fragment } from 'react'
+import { Menu, Transition, Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Contact from "@/app/(app-sections)/contact";
 import Hero from "@/app/(app-sections)/hero";
 import Skills from "@/app/(app-sections)/skills";
 import Experience from "@/app/(app-sections)/experience";
 import Projects from "@/app/(app-sections)/projects";
-import Education from "@/app/(app-sections)/education";
+import Courses from "@/app/(app-sections)/courses";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCloudArrowDown} from "@fortawesome/free-solid-svg-icons";
 
 const navigation = [
   { name: 'Home', href: '#home' },
@@ -17,6 +19,16 @@ const navigation = [
   { name: 'Contact', href: '#contact' },
 ]
 
+const items = [
+  { name: 'Save and schedule', href: '#' },
+  { name: 'Save and publish', href: '#' },
+  { name: 'Export PDF', href: '#' },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -24,6 +36,8 @@ export default function Home() {
     <>
       <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-center p-6 lg:px-8" aria-label="Global">
+          <div className="flex lg:flex-1">
+          </div>
           <div className="flex lg:hidden">
             <button
                 type="button"
@@ -40,6 +54,11 @@ export default function Home() {
                   {item.name}
                 </a>
             ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="https://assets.lucamatei.eu/files/luca-matei-resume-en.pdf" download className="text-sm font-semibold leading-6 text-gray-900">
+              Resume<FontAwesomeIcon className="ml-2" icon={faCloudArrowDown} />
+            </a>
           </div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -87,7 +106,7 @@ export default function Home() {
       <Skills/>
       <Experience/>
       <Projects/>
-      <Education/>
+      <Courses/>
       <Contact/>
     </>
   )

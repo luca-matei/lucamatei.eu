@@ -217,7 +217,7 @@ async function handleSubmit(event) {
               {/* Phone Number Field */}
               <div className="sm:col-span-2">
                 <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Phone number (Optional)
+                  Phone number
                 </label>
                 <div className="mt-2.5">
                   <input

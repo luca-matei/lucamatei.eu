@@ -9,9 +9,9 @@ const workplaces = [
     type: 'Remote, Contract',
     description: "",
     bullets: [
-      'Contributed to the development and enhancement of the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, optimizing storage connections, and improving search algorithms.',
-      'Implemented a versatile global component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.',
-      'Assisted in the onboarding process for new team members, ensuring a smooth integration into our project environment.',
+      'Developed and enhanced the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, improving search algorithms and optimizing storage connections.',
+      'Implemented a highly reusable component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.',
+      'Assisted in the onboarding process for new team members and participated in multiple code reviews.',
     ],
   },
   {
@@ -21,12 +21,12 @@ const workplaces = [
     type: 'Remote, Contract',
     description: "",
     bullets: [
-      "Actively contributed to the design and development of essential API components, ensuring robust and scalable solutions from the ground up.",
-      "Engaged in peer code reviews, providing constructive feedback to enhance code quality and team collaboration.",
+      "Played a key role in both designing and building vital API components, focusing on creating solutions that were both durable and capable of scaling effectively.",
       "Led the complete redesign and implementation of a high-capacity system across multiple servers, optimizing for user-customizable request handling and efficiency.",
-      "Developed and integrated a comprehensive credits system for the API, working with third-party subscription managers like Outseta to enhance user experience.",
+      "Managed various DevOps tasks, including setting up CI/CD pipelines, load balancers, and databases, and performed maintenance on both bare-metal servers and VPSes, prioritizing security and high-availability.",
       "Significantly improved API performance by overhauling its architecture, resulting in increased development speed, stability, scalability, and flexibility.",
-      "Managed various DevOps tasks, including the setup of advanced CI/CD pipelines, load balancers, and databases, and performed maintenance on both bare-metal servers and VPSes, prioritizing security and high-availability.",
+      "Developed and integrated a comprehensive credits system for the API, working with third-party subscription managers like Outseta.",
+      "Engaged in peer code reviews, providing constructive feedback to enhance code quality and team collaboration.",
     ],
   },
 ]
@@ -36,9 +36,9 @@ export default function Experience() {
     <div id="experience" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 mb-16 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Places I&apos;ve Worked</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Where I've Contributed</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            I&apos;m known for my resilience, self-reliance and strong commitment to growth.
+            People know me for my resilience, self-reliance and strong commitment to growth.
           </p>
         </div>
       </div>
