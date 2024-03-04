@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faMapPin } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
@@ -62,31 +62,31 @@ export default function Contact() {
     }
   };
 
-async function handleSubmit(event) {
-  event.preventDefault();
-  setIsLoading(true);
-  const formData = new FormData(event.target)
-  try {
-    const response = await fetch('/api/contact', {
-      method: 'post',
-      body: formData,
-    });
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+    const formData = new FormData(event.currentTarget)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'post',
+        body: formData,
+      });
 
-    if (!response.ok) {
+      if (!response.ok) {
+        setIsLoading(false);
+        console.log("falling over");
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData['message']);
+
+      toast.success('Message successfully sent');
       setIsLoading(false);
-      console.log("falling over");
-      throw new Error(`response status: ${response.status}`);
+    } catch (err) {
+      console.error(err);
+      toast.error("Error, please try resubmitting the form");
     }
-    const responseData = await response.json();
-    console.log(responseData['message']);
-
-    toast.success('Message successfully sent');
-    setIsLoading(false);
-  } catch (err) {
-    console.error(err);
-    toast.error("Error, please try resubmitting the form");
   }
-}
 
   return (
     <div id="contact" className="relative isolate">
@@ -96,7 +96,7 @@ async function handleSubmit(event) {
             <div
               className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's get in touch</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let&apos;s get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Drop me a line if you think we can team up or if you have any questions.
             </p>

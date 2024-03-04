@@ -59,7 +59,7 @@ export default function Example() {
           <div className="mt-4 flex items-center gap-x-6">
             <a href="https://github.com/luca-matei/" className="font-semibold leading-6 text-gray-300 hover:text-white">
               Learn more
-              <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
+              <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3.5 ml-2" aria-hidden="true"/>
             </a>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Example() {
                 <div className="mt-4 flex items-center gap-x-6">
                   <a href={card.href} className="text-sm font-semibold leading-6 text-gray-300 hover:text-white">
                     Learn more
-                    <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
+                    <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3.5 ml-2" aria-hidden="true"/>
                   </a>
                 </div>
               </div>

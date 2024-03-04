@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -39,14 +40,15 @@ export default function Hero() {
         <div className="mt-10 flex items-center gap-x-6">
           <a href="#experience" className="text-sm font-semibold leading-6 text-gray-900">
             Learn more
-              <FontAwesomeIcon icon={faArrowRightLong} className="ml-2" aria-hidden="true"/>
+              <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3.5 ml-2" aria-hidden="true"/>
           </a>
         </div>
       </div>
       <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
         <div className="mx-auto w-96 max-w-full drop-shadow-xl">
-          <img className="rounded-2xl" src="https://assets.lucamatei.eu/images/profile-picture.jpg"
-             alt=""/>
+          <img
+            className="rounded-2xl" src="https://assets.lucamatei.eu/images/profile-picture.jpg" alt="Luca Matei Profile Picture"
+          />
         </div>
       </div>
     </div>

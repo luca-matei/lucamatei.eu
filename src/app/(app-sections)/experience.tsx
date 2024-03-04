@@ -36,7 +36,7 @@ export default function Experience() {
     <div id="experience" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 mb-16 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Where I've Contributed</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Where I&apos;ve Contributed</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             People know me for my resilience, self-reliance and strong commitment to growth.
           </p>

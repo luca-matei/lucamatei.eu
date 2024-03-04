@@ -43,9 +43,9 @@ export default function Skills() {
       <div className="pt-24 sm:pt-32 lg:pt-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills I've Gained</h2>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Skills I&apos;ve Gained</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Here's the knowledge I've gained from 13 years of coding and how I've applied it in my last six months of professional experience.
+              Here&apos;s the knowledge I&apos;ve gained from 13 years of coding and how I&apos;ve applied it in my last six months of professional experience.
             </p>
           </div>
         </div>
