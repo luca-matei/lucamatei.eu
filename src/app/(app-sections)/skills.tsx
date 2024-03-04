@@ -12,6 +12,12 @@ const features = [
       tags: ['debian', 'openssh', 'qemu', 'nftables', 'nfs', 'bind9', 'isc-dhcp-server', 'dnsmasq', 'bash'],
     },
     {
+      name: 'Open Source',
+      description:
+        "I've helped improve Pydantic and I'm looking to do more work on open-source projects. You can find all my personal projects available for anyone to see on my GitHub.",
+      tags: ['pydantic', 'llms', 'automations', 'saas', 'tools'],
+    },
+    {
       name: 'Backend',
       description:
         'I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites.',
@@ -28,12 +34,6 @@ const features = [
       description:
         'I can install and take care of Linux, web, and database servers, along with containers, making sure they handle traffic smoothly. I\'ve also set up systems for continuous integration and delivery, as well as monitoring tools.',
       tags: ['railway', 'github-actions', 'bitbucket-pipelines', 'hetzner', 'haproxy', 'pgbouncer', 'git', 'docker', 'prometheus', 'grafana', 'sentry', 'supervisor'],
-    },
-    {
-      name: 'Open Source',
-      description:
-        "I've helped improve Pydantic and I'm looking to do more work on open-source projects. You can find all my personal projects available for anyone to see on my GitHub.",
-      tags: ['pydantic', 'llms', 'automations', 'saas', 'tools'],
     },
 ]
 

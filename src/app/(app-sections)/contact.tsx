@@ -98,7 +98,7 @@ async function handleSubmit(event) {
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Write me if you believe we can work together or if you have any questions.
+              Drop me a line if you think we can team up or if you have any questions.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
               <div className="flex gap-x-4">
@@ -136,7 +136,7 @@ async function handleSubmit(event) {
                 <a href="https://t.me/lucamatei" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTelegram} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
                 </a>
-                <a href="https://www.linkedin.com/lucamatei" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/lucamatei" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
                 </a>
                 <a href="https://github.com/luca-matei" target="_blank" rel="noopener noreferrer">

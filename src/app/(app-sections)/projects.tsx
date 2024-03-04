@@ -4,19 +4,19 @@ import {faArrowRightLong, faBrain, faCodeBranch, faServer} from "@fortawesome/fr
 const cards = [
   {
     name: 'Personal AI Saas Platform',
-    description: 'A NextJS and Python platform that makes your life easier to manage by combining daily tasks with AI analysis and recommendations.',
+    description: 'A platform built with NextJS and Python that simplifies your life by merging everyday tasks with AI-driven analysis and suggestions.',
     icon: faBrain,
     href: "https://github.com/luca-matei/digital-marmot-platform-app",
   },
   {
     name: 'DevOps Automations Tool',
-    description: 'Automated tool to manage networks, servers and services on a home network or small cloud from a Python API based app.',
+    description: 'An automated tool for managing networks, servers, and services on a home network or small cloud through a Python API.',
     icon: faCodeBranch,
     href: "https://github.com/luca-matei/",
   },
   {
     name: 'WSGI Web Framework',
-    description: 'Backend framework written in Python for presentation websites. Include a YAML-based CMS and a CSS framework similar to Tailwind CSS.',
+    description: 'A backend framework written in Python for creating presentation websites, featuring a YAML CMS and a CSS framework akin to Tailwind CSS.',
     icon: faServer,
     href: "https://github.com/luca-matei/",
   },
