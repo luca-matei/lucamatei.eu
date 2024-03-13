@@ -31,7 +31,7 @@ export default function Hero() {
     </svg>
     <div className="mx-auto max-w-7xl px-6 pt-24 sm:pt-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:pt-40">
       <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-        <p className="text-base font-semibold leading-7 text-indigo-600">Full Stack Engineer</p>
+        <p className="text-base font-semibold leading-7 text-indigo-600">Full Stack Developer</p>
         <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Hi. I&apos;m
           Luca</h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
