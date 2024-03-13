@@ -4,7 +4,7 @@ import {faCheck} from "@fortawesome/free-solid-svg-icons";
 const workplaces = [
   {
     company: 'getitAI, Inc.',
-    role: 'Full Stack Engineer',
+    role: 'Full Stack Developer',
     period: 'Oct 2023 - Present',
     type: 'Remote, Contract',
     description: "",
@@ -16,7 +16,7 @@ const workplaces = [
   },
   {
     company: 'Signed NDA',
-    role: 'Full Stack Engineer',
+    role: 'Full Stack Developer',
     period: 'Jul 2023 - Present',
     type: 'Remote, Contract',
     description: "",
