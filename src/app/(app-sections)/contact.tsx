@@ -145,7 +145,7 @@ export default function Contact() {
               </div>
             </dl>
           </div>
-          <p className="text-xs leading-5 text-gray-500">
+          <p className="text-xs leading-5 text-gray-500 lg:block hidden">
             &copy; 2024 Luca Matei. All rights reserved.
           </p>
         </div>
@@ -264,7 +264,7 @@ export default function Contact() {
                 >
                   {isLoading ? (
                     <div className="spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full"
-                         role="status">
+                      role="status">
                     </div>
                   ) : (
                     "Send message"
@@ -272,6 +272,9 @@ export default function Contact() {
                 </button>
               </div>
             </div>
+            <p className="text-xs text-center leading-5 text-gray-500 mt-16 lg:hidden">
+              &copy; 2024 Luca Matei. All rights reserved.
+            </p>
           </div>
         </form>
       </div>
