@@ -88,7 +88,7 @@ function Course(course: Course) {
           </p>
         </div>
         <div className="mt-1 flex items-center gap-x-2 text-xs leading-5 text-gray-500">
-          <p>{course.courses} courses</p>
+          <p className="whitespace-nowrap">{course.courses} courses</p>
           <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
             <circle cx={1} cy={1} r={1}/>
           </svg>
@@ -131,7 +131,7 @@ export default function Courses() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none lg:mx-0">
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             <ul role="list" className="divide-y divide-gray-100">
               {courses.map((course, index) => (
                 index % 2 === 0 && <Course key={course.id} {...course} />
