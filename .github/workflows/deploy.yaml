@@ -20,12 +20,12 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         source: "."
-        target: "/home/${{ secrets.USERNAME }}/lucamatei.eu-temp"
+        target: "/home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu-temp"
         script: |
-          rm -rf /home/${{ secrets.USERNAME }}/lucamatei.eu
-          mv /home/${{ secrets.USERNAME }}/lucamatei.eu-temp /home/${{ secrets.USERNAME }}/lucamatei.eu
+          rm -rf /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu
+          mv /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu-temp /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu
           
-          cd /home/${{ secrets.USERNAME }}/lucamatei.eu
+          cd /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu
 
           echo "SENDGRID_RECEIVER=${{ secrets.SENDGRID_RECEIVER }}" > .env
           echo "SENDGRID_SENDER=${{ secrets.SENDGRID_SENDER }}" >> .env
