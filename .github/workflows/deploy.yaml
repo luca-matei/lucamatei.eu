@@ -1,4 +1,4 @@
-name: Deploy Website
+name: Deploy to Server
 
 on:
   push:
@@ -12,30 +12,26 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install dependencies with Yarn
-      run: yarn install
-
-    - name: Build the app with Yarn
-      run: yarn build
-
-    - name: Copy files to the server
-      uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.PORT }}
-        source: ".next/,public/,package.json,yarn.lock"
-        target: "/home/${{ secrets.USERNAME }}"
-
-    - name: Install production dependencies and Restart the service
+    - name: Deploy to Server
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
+        source: "."
+        target: "/home/${{ secrets.USERNAME }}/lucamatei.eu-temp"
         script: |
-          cd /home/${{ secrets.USERNAME }}
+          rm -rf /home/${{ secrets.USERNAME }}/lucamatei.eu
+          mv /home/${{ secrets.USERNAME }}/lucamatei.eu-temp /home/${{ secrets.USERNAME }}/lucamatei.eu
+          
+          cd /home/${{ secrets.USERNAME }}/lucamatei.eu
+
+          echo "SENDGRID_RECEIVER=${{ secrets.SENDGRID_RECEIVER }}" > .env
+          echo "SENDGRID_SENDER=${{ secrets.SENDGRID_SENDER }}" >> .env
+          echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env
+
           yarn install
+          yarn build
+
           sudo systemctl restart lucamatei.eu
