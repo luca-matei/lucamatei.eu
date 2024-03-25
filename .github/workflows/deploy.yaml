@@ -1,0 +1,41 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies with Yarn
+      run: yarn install
+
+    - name: Build the app with Yarn
+      run: yarn build
+
+    - name: Copy files to the server
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        source: ".next/,public/,package.json,yarn.lock"
+        target: "/home/${{ secrets.USERNAME }}"
+
+    - name: Install production dependencies and Restart the service
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd /home/${{ secrets.USERNAME }}
+          yarn install
+          sudo systemctl restart lucamatei.eu
