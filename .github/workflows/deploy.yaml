@@ -12,8 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Deploy to Server
-      uses: appleboy/ssh-action@v1.0.3
+    - name: Copy files to the server
+      uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -21,6 +21,14 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "."
         target: "/home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu-temp"
+
+    - name: Setup and Run Website
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
         script: |
           rm -rf /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu
           mv /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu-temp /home/${{ secrets.USERNAME }}/digital_marmot/lucamatei.eu
