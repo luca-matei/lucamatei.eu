@@ -108,6 +108,7 @@ function Course(course: Course) {
       <div className="flex flex-none items-center gap-x-4">
         <a
             href={course.href}
+            target="_blank"
             className="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:block"
         >
           View certificate<span className="sr-only">, {course.name}</span>
@@ -119,19 +120,35 @@ function Course(course: Course) {
 
 
 export default function Courses() {
+  const content = {
+    title: "Courses & Certifications",
+    description: "I enjoy learning and have made it a daily habit.",
+  }
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Courses & Certifications</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            I enjoy learning and have made it a daily habit.
-          </p>
-        </div>
-      </div>
+    <div id="courses" className="py-24 sm:py-32 lg:pt-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none lg:mx-0">
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-wrap gap-y-6 mb-8">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{content.title}</h2>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                {content.description}
+              </p>
+            </div>
+            <div className="items-center grid grid-cols-3 gap-4">
+              <a className="h-24 w-24 mx-auto" href="https://bcert.me/sipbjjrqi" target="_blank">
+                <img
+                  className="rounded-xl" src="https://assets.lucamatei.eu/images/seal-csm.png"
+                  alt="Certified ScrumMaster Badge"
+                />
+              </a>
+              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
+              </div>
+              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             <ul role="list" className="divide-y divide-gray-100">
               {courses.map((course, index) => (
                 index % 2 === 0 && <Course key={course.id} {...course} />

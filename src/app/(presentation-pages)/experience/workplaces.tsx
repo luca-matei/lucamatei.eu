@@ -17,7 +17,7 @@ const workplaces = [
   {
     company: 'Signed NDA',
     role: 'Full Stack Developer',
-    period: 'Jul 2023 - Present',
+    period: 'Jul 2023 - Apr 2024',
     type: 'Remote, Contract',
     description: "",
     bullets: [
@@ -31,9 +31,9 @@ const workplaces = [
   },
 ]
 
-export default function Experience() {
+export default function Workplaces() {
   return (
-    <div id="experience" className="py-24 sm:py-32">
+    <div id="workplaces" className="pt-24 sm:pt-32 lg:pt-40">
       <div className="mx-auto max-w-7xl px-6 mb-16 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Where I&apos;ve Contributed</h2>
@@ -46,7 +46,7 @@ export default function Experience() {
       <div key={index} className={index !== workplaces.length - 1 ? "pb-24 sm:pb-32" : ""}>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <div>
               <h2 className="text-base font-semibold leading-7 text-indigo-600">{workplace.company}</h2>
               <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{workplace.role}</p>

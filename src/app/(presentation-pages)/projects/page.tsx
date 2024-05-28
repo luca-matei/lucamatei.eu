@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong, faBrain, faCodeBranch, faServer} from "@fortawesome/free-solid-svg-icons";
+import {faShopify} from "@fortawesome/free-brands-svg-icons";
 
 const cards = [
   {
@@ -7,6 +8,24 @@ const cards = [
     description: 'A platform built with NextJS and Python that simplifies your life by merging everyday tasks with AI-driven analysis and suggestions.',
     icon: faBrain,
     href: "https://github.com/luca-matei/digital-marmot-platform-app",
+  },
+  {
+    name: 'Shopipy',
+    description: 'A Python library for interacting with the Shopify API',
+    icon: faShopify,
+    href: "https://github.com/luca-matei/shopipy",
+  },
+  {
+    name: 'URL Shortener',
+    description: 'A URL shortener built with NextJS and Python that allows you to shorten URLs and track their usage.',
+    icon: faCodeBranch,
+    href: "https://github.com/luca-matei/url-shortener",
+  },
+  {
+    name: 'Controlink',
+    description: 'A program to share one pair of keyboard and mouse between multiple computers.',
+    icon: faServer,
+    href: "https://github.com/luca-matei/",
   },
   {
     name: 'DevOps Automations Tool',
@@ -22,9 +41,9 @@ const cards = [
   },
 ]
 
-export default function Example() {
+export default function Projects() {
   return (
-    <div id="projects" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div id="projects" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 lg:pt-40">
       {/*
       <img
         src="./projects.jpg"

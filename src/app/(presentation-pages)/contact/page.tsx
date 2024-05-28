@@ -7,7 +7,7 @@ import { faLinkedin, faGithub, faTelegram } from '@fortawesome/free-brands-svg-i
 import { toast } from 'react-toastify';
 
 
-export default function Contact() {
+export function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [firstNameValidation, setFirstNameValidation] = useState('');
   const [lastNameValidation, setLastNameValidation] = useState('');
@@ -89,7 +89,8 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="relative isolate">
+    <>
+    <div id="contact" className="relative isolate h-full">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="grow mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
@@ -166,6 +167,8 @@ export default function Contact() {
                     minLength={2}
                     maxLength={32}
                     onBlur={validateFirstName}
+                    autoComplete="given-name"
+                    placeholder="John"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <p className={`mt-2 text-red-500 text-xs ${firstNameValidation ? 'opacity-100' : 'opacity-0'}`}>
@@ -187,6 +190,7 @@ export default function Contact() {
                     maxLength={32}
                     onBlur={validateLastName}
                     autoComplete="family-name"
+                    placeholder="Doe"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <p className={`mt-2 text-red-500 text-xs ${lastNameValidation ? 'opacity-100' : 'opacity-0'}`}>
@@ -195,7 +199,7 @@ export default function Contact() {
                 </div>
               </div>
               {/* Email Field */}
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
                   Email <span className="text-red-500">*</span>
                 </label>
@@ -207,6 +211,8 @@ export default function Contact() {
                     required
                     maxLength={64}
                     onBlur={validateEmail}
+                    autoComplete="email"
+                    placeholder="john.doe@example.com"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <p className={`mt-2 text-red-500 text-xs ${emailValidation ? 'opacity-100' : 'opacity-0'}`}>
@@ -215,7 +221,7 @@ export default function Contact() {
                 </div>
               </div>
               {/* Phone Number Field */}
-              <div className="sm:col-span-2">
+              <div>
                 <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
                   Phone number
                 </label>
@@ -227,6 +233,7 @@ export default function Contact() {
                     maxLength={16}
                     onBlur={validatePhone}
                     autoComplete="tel"
+                    placeholder="1234567890"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     title="Expected format: +1234567890 or 1234567890"
                   />
@@ -249,6 +256,7 @@ export default function Contact() {
                     minLength={10}
                     maxLength={4096}
                     onBlur={validateMessage}
+                    placeholder={"Hey Luca, I'd like to talk about..."}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <p className={`mt-2 text-red-500 text-xs ${messageValidation ? 'opacity-100' : 'opacity-0'}`}>
@@ -279,5 +287,13 @@ export default function Contact() {
         </form>
       </div>
     </div>
+    </>
   )
+}
+
+export default function Contact() {
+  return (
+    <>
+    </>
+  );
 }

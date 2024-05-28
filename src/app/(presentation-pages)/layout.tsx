@@ -1,30 +1,30 @@
 "use client";
-
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import Contact from "@/app/(app-sections)/contact";
-import Hero from "@/app/(app-sections)/hero";
-import Skills from "@/app/(app-sections)/skills";
-import Experience from "@/app/(app-sections)/experience";
-import Projects from "@/app/(app-sections)/projects";
-import Courses from "@/app/(app-sections)/courses";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCloudArrowDown, faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {usePathname} from "next/navigation";
+import {ContactSection} from "@/app/(presentation-pages)/contact/page";
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'Experience', href: '/experience' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '/contact' },
 ]
 
-export default function Home() {
+export default function PresentationLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const currentPathname = usePathname()
 
   return (
     <>
       <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
+        <nav className="flex items-center justify-between p-4 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
           <div className="flex lg:flex-1">
           </div>
           <div className="flex lg:hidden">
@@ -39,14 +39,18 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`p-1 text-sm font-semibold leading-6 text-gray-900 ${currentPathname === item.href ? 'border-b-2 border-b-[#4F46E5]' : ''}`}
+                >
                   {item.name}
                 </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="https://assets.lucamatei.eu/files/luca-matei-resume-en.pdf" className="text-sm font-semibold leading-6 text-gray-900">
-              Resume<FontAwesomeIcon icon={faCloudArrowDown} className="ml-2 h-4 w-4" aria-hidden="true"/>
+            <a href="https://assets.lucamatei.eu/files/luca-matei-resume-en.pdf" className="p-1 text-sm font-semibold leading-6 text-gray-900">
+              Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
             </a>
           </div>
         </nav>
@@ -72,7 +76,7 @@ export default function Home() {
                       <a
                           key={item.name}
                           href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ${currentPathname === item.href ? 'bg-gray-50' : ''}`}
                           onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -92,13 +96,8 @@ export default function Home() {
           </Dialog.Panel>
         </Dialog>
       </header>
-
-      <Hero/>
-      <Skills/>
-      <Experience/>
-      <Projects/>
-      <Courses/>
-      <Contact/>
+      {children}
+      <ContactSection />
     </>
   )
 }
