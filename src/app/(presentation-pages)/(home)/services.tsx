@@ -7,7 +7,7 @@ const tiers = [
     name: 'Software Consulting',
     id: 'tier-consulting',
     href: '#contact',
-    priceMonthly: '€29',
+    priceMonthly: '€39',
     description: 'Ideal for individuals and small teams ready to kickstart their projects or overcome hurdles.',
     features: [
       '45-Minute Free Consultation',
@@ -20,7 +20,7 @@ const tiers = [
     name: 'Custom Software Development',
     id: 'tier-development',
     href: '#contact',
-    priceMonthly: '€49',
+    priceMonthly: '€59',
     description: 'Perfect for those who need another hand on deck. I work best in fast-paced startup environments.',
     features: [
       'No onboarding fees',

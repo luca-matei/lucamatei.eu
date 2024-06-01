@@ -8,7 +8,7 @@ export default function Hero() {
     title: () => {
       return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Full Stack Developer</span></>
     },
-    description: "I've been coding for 13 years and have spent the last year helping startups develop their products. I've quickly become their go-to full stack developer and the key person for major architectural changes and planning. In my spare time, I enjoy writing about programming and teaching others how to code.",
+    description: "I've been writing software for 13 years and have spent the last year helping startups build their products. I've quickly become the developer they count on and a key person for major architectural changes and planning. Outside of work, I share my thoughts on programming and help others learn to code.",
   }
 
   return (

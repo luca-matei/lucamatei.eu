@@ -8,7 +8,7 @@ const skills = [
       name: 'Python',
       description:
         "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models.",
-      tags: ['uwsgi', 'asyncio', 'openai', 'unittest', 'httpx', 'lxml', 'black'],
+      tags: ['uwsgi', 'shopify', 'langchain', 'asyncio', 'openai', 'unittest', 'httpx', 'lxml', 'black'],
     },
     {
       icon: faLinux,

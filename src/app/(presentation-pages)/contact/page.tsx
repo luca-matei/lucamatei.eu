@@ -146,7 +146,7 @@ export function ContactSection() {
               </div>
             </dl>
           </div>
-          <p className="text-xs leading-5 text-gray-500 lg:block hidden">
+          <p className="text-sm leading-5 text-gray-500 lg:block hidden">
             &copy; 2024 Luca Matei. All rights reserved.
           </p>
         </div>
@@ -171,7 +171,7 @@ export function ContactSection() {
                     placeholder="John"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-xs ${firstNameValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${firstNameValidation ? 'opacity-100' : 'opacity-0'}`}>
                     {firstNameValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
@@ -193,7 +193,7 @@ export function ContactSection() {
                     placeholder="Doe"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-xs ${lastNameValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${lastNameValidation ? 'opacity-100' : 'opacity-0'}`}>
                     {lastNameValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
@@ -215,7 +215,7 @@ export function ContactSection() {
                     placeholder="john.doe@example.com"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-xs ${emailValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${emailValidation ? 'opacity-100' : 'opacity-0'}`}>
                     {emailValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
@@ -237,7 +237,7 @@ export function ContactSection() {
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     title="Expected format: +1234567890 or 1234567890"
                   />
-                  <p className={`mt-2 text-red-500 text-xs ${phoneValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${phoneValidation ? 'opacity-100' : 'opacity-0'}`}>
                     {phoneValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
@@ -259,10 +259,13 @@ export function ContactSection() {
                     placeholder={"Hey Luca, I'd like to talk about..."}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-xs ${messageValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${messageValidation ? 'opacity-100' : 'opacity-0'}`}>
                     {messageValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
+                <p className={"text-gray-400 text-sm"}>
+                  <span className={"font-bold"}>Note:</span> Data you enter is not stored on my servers and is directly sent to my email as seen in the <a href={"https://github.com/luca-matei/lucamatei.eu"} target={"_blank"} className={"underline underline-offset-4"}>source code</a> of this website.
+                </p>
               </div>
               <div className="sm:col-span-2 mt-8 flex justify-end">
                 <button
@@ -280,7 +283,7 @@ export function ContactSection() {
                 </button>
               </div>
             </div>
-            <p className="text-xs text-center leading-5 text-gray-500 mt-16 lg:hidden">
+            <p className="text-sm text-center leading-5 text-gray-500 mt-16 lg:hidden">
               &copy; 2024 Luca Matei. All rights reserved.
             </p>
           </div>

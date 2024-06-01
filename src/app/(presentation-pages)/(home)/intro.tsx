@@ -6,18 +6,19 @@ export default function Intro() {
     description: () => {
       return (
         <>
-          <p className="mb-6">I am a Full Stack Developer with a strong commitment to growth and a proven track record of developing and enhancing SaaS platforms with Python and JavaScript frameworks in Linux environments.</p>
-          <p>I am a Full Stack Developer with a strong commitment to growth and a proven track record of developing and enhancing SaaS platforms with Python and JavaScript frameworks in Linux environments.</p>
+          <p className="mb-6">I'm driven by the desire to grow and learn, taking each day as a chance to pick up something new. It's not just programming that interests me; I have a passion for social science and trains as well.</p>
+          <p>My goal is to keep improving so I can inspire others to see learning about what they love as an essential part of life. Ongoing curiosity and experimenting have led to amazing opportunities to grow as a person and become a better software developer.</p>
         </>
       )
     },
     industry: {
-      title: "How I Started In The Software Industry",
+      title: "Starting Out in My Software Career",
       description: () => {
         return (
           <>
-            <p className="mb-6">I started my career in the software industry in 2019 as a Full Stack Developer at a startup. I was responsible for designing and implementing complex systems, focusing on creating solutions that were both durable and capable of scaling effectively.</p>
-            <p>Since then, I've worked on a variety of projects, including developing a framework on a uWSGI server to manage the backend of multiple presentation websites and improving Pydantic.</p>
+            <p className="mb-6">Breaking into the industry was a long journey. It took years of trying out different things, building various software - websites, games, automation scripts - and facing intense research, burnout, and personal challenges. The three years before applying for my first job were the toughest. Once I felt ready, I started applying and, within three weeks, landed my first job at a European company with decent pay.</p>
+            <p className="mb-6">I quickly gained credibility and trust through the principles I developed over 12 years of programming. Within a month, I received a 10% raise. In two months, I became the main developer. Three months later, another European company approached me, and I doubled my salary. In nine months, I learned new tools and frameworks, tripling my initial salary.</p>
+            <p>Now, I consult for small entrepreneurs and those starting their programming careers, creating amazing products with LLMs. I aspire to be a software architect and ultimately a leader, already holding a Scrum Master certification. My success is due to dedication, resilience, and a love for learning.</p>
           </>
         )
       },
