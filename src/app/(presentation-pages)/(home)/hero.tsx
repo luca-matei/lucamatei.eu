@@ -1,6 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 
 export default function Hero() {
   const content = {
@@ -8,7 +7,7 @@ export default function Hero() {
     title: () => {
       return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Full Stack Developer</span></>
     },
-    description: "I've been writing software for 13 years and have spent the last year helping startups build their products. I've quickly become the developer they count on and a key person for major architectural changes and planning. Outside of work, I share my thoughts on programming and help others learn to code.",
+    description: "I've been writing software for 13 years and have spent the last year helping startups build their products. Outside of work, I share my thoughts on tech and help others learn to code.",
   }
 
   return (
@@ -33,7 +32,7 @@ export default function Hero() {
                 href="#contact"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Book a meeting
+                Get Started
               </a>
               <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">
                 Learn more <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3 ml-1" aria-hidden="true"></FontAwesomeIcon>
@@ -53,26 +52,25 @@ export default function Hero() {
 }
 
 {/*
-      <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-        <div className="mx-auto w-96 max-w-full">
+  <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+    <div className="mx-auto w-96 max-w-full">
+      <img
+        className="rounded-2xl" src="https://assets.lucamatei.eu/images/profile-picture.jpg"
+        alt="Luca Matei Profile Picture"
+      />
+      <div className="items-center mt-2 grid grid-cols-3 gap-4">
+        <a className="mx-auto" href="https://bcert.me/sipbjjrqi" target="_blank">
           <img
-            className="rounded-2xl" src="https://assets.lucamatei.eu/images/profile-picture.jpg"
-            alt="Luca Matei Profile Picture"
-          />
-          <div className="items-center mt-2 grid grid-cols-3 gap-4">
-            <a className="mx-auto" href="https://bcert.me/sipbjjrqi" target="_blank">
-              <img
-                className="h-24 w-24 rounded-xl" src="https://assets.lucamatei.eu/images/seal-csm.png"
-                alt="Certified ScrumMaster Badge"
-                />
-              </a>
-              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-              </div>
-              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-              </div>
-            </div>
+            className="h-24 w-24 rounded-xl" src="https://assets.lucamatei.eu/images/seal-csm.png"
+            alt="Certified ScrumMaster Badge"
+            />
+          </a>
+          <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
+          </div>
+          <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
           </div>
         </div>
       </div>
-
-      */}
+    </div>
+  </div>
+*/}

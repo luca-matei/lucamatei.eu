@@ -1,6 +1,5 @@
-import { CheckIcon } from '@heroicons/react/20/solid'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLongArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {faLongArrowRight, faCheck} from "@fortawesome/free-solid-svg-icons";
 
 const tiers = [
   {
@@ -85,7 +84,7 @@ export default function Services() {
                     <ul role="list" className="mt-10 space-y-4 text-sm leading-6 text-gray-600">
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex gap-x-3">
-                          <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                          <FontAwesomeIcon icon={faCheck} className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
                           {feature}
                         </li>
                       ))}
