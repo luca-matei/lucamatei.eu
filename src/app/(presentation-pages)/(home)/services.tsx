@@ -34,7 +34,7 @@ export default function Services() {
   const content = {
     subtitle: "Services",
     title: "I'll Build Your Next Big Thing",
-    description: "I've helped startups launch and improve their products, and guided people in making the best choices for their IT careers.",
+    description: "I specialize in building Python APIs for SaaS products, but I also have experience with Linux server management, Shopify integrations and LLMs.",
     discounted: {
       title: "Discounted",
       description: "Educational or social impact projects may qualify for a discount or pro-bono work. Other projects can get a lower rate if handled by the juniors I train, as I also have a full-time job or the projects are lower priority."

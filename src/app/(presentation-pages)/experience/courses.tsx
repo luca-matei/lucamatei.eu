@@ -122,43 +122,25 @@ function Course(course: Course) {
 export default function Courses() {
   const content = {
     title: "Courses & Certifications",
-    description: "I enjoy learning and have made it a daily habit.",
+    description: "I love learning and have made it a daily habit.",
   }
   return (
     <div id="courses" className="py-24 sm:py-32 lg:pt-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none lg:mx-0">
-          <div className="flex flex-wrap gap-y-6 mb-8">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{content.title}</h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                {content.description}
-              </p>
-            </div>
-            <div className="items-center grid grid-cols-3 gap-4">
-              <a className="h-24 w-24 mx-auto" href="https://bcert.me/sipbjjrqi" target="_blank">
-                <img
-                  className="rounded-xl" src="https://assets.lucamatei.eu/images/seal-csm.png"
-                  alt="Certified ScrumMaster Badge"
-                />
-              </a>
-              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-              </div>
-              <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-              </div>
-            </div>
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{content.title}</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              {content.description}
+            </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             <ul role="list" className="divide-y divide-gray-100">
               {courses.map((course, index) => (
-                index % 2 === 0 && <Course key={course.id} {...course} />
+                  <Course key={course.id} {...course} />
               ))}
             </ul>
-            <ul role="list" className="divide-y divide-gray-100">
-              {courses.map((course, index) => (
-                index % 2 !== 0 && <Course key={course.id} {...course} />
-              ))}
-            </ul>
+            <img src="/csm-certificate.jpg" className="w-full max-w-4xl my-5 h-auto border rounded-lg shadow-md" alt="Certificate"/>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import {faLinux, faOpensuse, faPython} from "@fortawesome/free-brands-svg-icons";
-import {faCodeBranch, faCodeFork, faCog, faLaptopCode, faServer} from "@fortawesome/free-solid-svg-icons";
+import {faLinux, faPython, faShopify} from "@fortawesome/free-brands-svg-icons";
+import {faCog, faLaptopCode, faServer} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const skills = [
@@ -7,7 +7,7 @@ const skills = [
       icon: faPython,
       name: 'Python',
       description:
-        "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models.",
+        "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models. I'm also teaching students and juniors to code in Python.",
       tags: ['uwsgi', 'shopify', 'langchain', 'asyncio', 'openai', 'unittest', 'httpx', 'lxml', 'black'],
     },
     {
@@ -18,17 +18,10 @@ const skills = [
       tags: ['debian', 'openssh', 'qemu', 'nftables', 'nfs', 'bind9', 'isc-dhcp-server', 'dnsmasq', 'bash'],
     },
     {
-      icon: faCodeFork,
-      name: 'Open Source',
-      description:
-        "I've helped improve Pydantic and I'm looking to do more work on open-source projects. You can find all my personal projects available for anyone to see on my GitHub.",
-      tags: ['pydantic', 'llms', 'automations', 'saas', 'tools'],
-    },
-    {
       icon: faServer,
       name: 'Backend',
       description:
-        'I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites.',
+        'I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites. My code is self-documenting, scalable and consistent within design patterns.',
       tags: ['fastapi', 'postgresql', 'redis', 'celery', 'dramatiq', 'supabase', 'sqlalchemy', 'pydantic'],
     },
     {
@@ -43,7 +36,14 @@ const skills = [
       name: 'DevOps',
       description:
         'I can install and take care of Linux, web, and database servers, along with containers, making sure they handle traffic smoothly. I\'ve also set up systems for continuous integration and delivery, as well as monitoring tools.',
-      tags: ['railway', 'github-actions', 'bitbucket-pipelines', 'hetzner', 'haproxy', 'pgbouncer', 'git', 'docker', 'prometheus', 'grafana', 'sentry', 'supervisor'],
+      tags: ['railway', 'github-actions', 'hetzner', 'haproxy', 'pgbouncer', 'git', 'docker', 'prometheus', 'grafana', 'sentry', 'supervisor'],
+    },
+    {
+      icon: faShopify,
+      name: 'Shopify',
+      description:
+        "I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I'm currently writing an open-source Python library aimed to be better documented and better structured than the official one.",
+      tags: ['custom-app', 'webhooks', 'app-embeds', 'shopify-cli', 'admin-api', 'open-source'],
     },
 ]
 

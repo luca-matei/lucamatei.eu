@@ -7,7 +7,7 @@ export default function Hero() {
     title: () => {
       return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Full Stack Developer</span></>
     },
-    description: "I've been writing software for 13 years and have spent the last year helping startups build their products. Outside of work, I share my thoughts on tech and help others learn to code.",
+    description: "I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.",
   }
 
   return (
@@ -29,12 +29,12 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
-                href="#contact"
+                href="#about"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get Started
               </a>
-              <a href="#about" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="/experience" className="text-sm font-semibold leading-6 text-gray-900">
                 Learn more <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3 ml-1" aria-hidden="true"></FontAwesomeIcon>
               </a>
             </div>

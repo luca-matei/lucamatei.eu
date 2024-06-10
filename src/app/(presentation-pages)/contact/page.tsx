@@ -97,7 +97,7 @@ export function ContactSection() {
             <div
               className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let&apos;s get in touch</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let&apos;s Get In Touch!</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Drop me a line if you think we can team up or if you have any questions.
             </p>
@@ -147,7 +147,7 @@ export function ContactSection() {
             </dl>
           </div>
           <p className="text-sm leading-5 text-gray-500 lg:block hidden">
-            &copy; 2024 Luca Matei. All rights reserved.
+            &copy; 2024 Luca Matei. All rights reserved. Made in Romania.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
@@ -264,7 +264,7 @@ export function ContactSection() {
                   </p>
                 </div>
                 <p className={"text-gray-400 text-sm"}>
-                  <span className={"font-bold"}>Note:</span> Data you enter is not stored on my servers and is directly sent to my email as seen in the <a href={"https://github.com/luca-matei/lucamatei.eu"} target={"_blank"} className={"underline underline-offset-4"}>source code</a> of this website.
+                  <span className={"font-bold"}>Disclaimer:</span> The information you provide through the contact form on this website is not stored or processed on my servers. Instead, it is sent directly to my email. You can verify this process in the <a href={"https://github.com/luca-matei/lucamatei.eu"} target={"_blank"} className={"underline underline-offset-4"}>source code</a>. The data will be used solely to respond to your message.
                 </p>
               </div>
               <div className="sm:col-span-2 mt-8 flex justify-end">
@@ -284,7 +284,7 @@ export function ContactSection() {
               </div>
             </div>
             <p className="text-sm text-center leading-5 text-gray-500 mt-16 lg:hidden">
-              &copy; 2024 Luca Matei. All rights reserved.
+              &copy; 2024 Luca Matei. All rights reserved. Made in Romania.
             </p>
           </div>
         </form>
