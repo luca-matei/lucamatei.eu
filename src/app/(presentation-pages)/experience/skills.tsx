@@ -42,7 +42,7 @@ const skills = [
       icon: faShopify,
       name: 'Shopify',
       description:
-        "I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I'm currently writing an open-source Python library aimed to be better documented and better structured than the official one.",
+        "I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I'm currently writing an open-source Python SDK aimed to be better documented and better structured than the official one.",
       tags: ['custom-app', 'webhooks', 'app-embeds', 'shopify-cli', 'admin-api', 'open-source'],
     },
 ]

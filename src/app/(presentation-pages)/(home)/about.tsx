@@ -5,28 +5,22 @@ export default function About() {
     },
     description: () => {
       return (
-          <>
-            <p className="mb-6">I've got a chance at learning to code when I was 7 and I've loved it so much that I
-              haven't stopped doing it since then. I've passed all my computer science classes with 10/10. In Sophomore year, I was trusted
-              by my teacher to lead a HTML and CSS class. In Junior Year I led a Web Development
-              after-hours course where 25+ people across the school have joined for a semester.</p>
-            <p className="mb-6">2 years after graduating high school, I consult for small entrepreneurs and those starting their programming careers and I'm building amazing
-              products with LLMs. I aspire to be a Solutions Architect and ultimately a leader, already holding a Scrum
-              Master certification. My success is due to dedication, resilience, and a love for learning.</p>
-            <p>My goal is to keep improving so I can inspire others to see learning about what they love as an essential
-              part of life. Ongoing curiosity and experimenting have led to amazing opportunities to grow as a person
-              and become a better software developer.</p>
-          </>
+        <>
+          <p className="mb-6">I started learning to code when I was just 7 years old and I’ve been hooked ever since. I aced all my computer science classes with perfect scores. In my sophomore year of high school, my teacher trusted me to lead a class on HTML and CSS. The following year, I ran an after-school web development course that attracted over 25 students for a whole semester.</p>
+          <p className="mb-6">Two years after finishing high school, I began consulting for small business owners and those just starting out in programming. I’m also working on some cool projects with large language models. I’m aiming to become a Solutions Architect and eventually take on more leadership roles. I’ve already earned my Scrum Master certification, and my commitment, perseverance, and passion for learning have really driven my success.</p>
+          <p>My main goal is to keep getting better so I can encourage others to see learning about their passions as a
+            vital part of life. Staying curious and willing to experiment has opened up incredible opportunities for
+            personal and professional growth as a software developer.</p>
+        </>
       )
     },
     industry: {
-      title: "Starting Out in My Software Career",
+      title: "Kicking Off My Career in Software Development\n",
       description: () => {
         return (
             <>
-              <p className="mb-6">Breaking into the industry was a long journey. It took years of trying out different
-                things, building various software - websites, games, complex automation scripts - and facing intense research, frequent burnouts, and consuming personal challenges. The three years before applying for my first job were the toughest, but once I felt ready, I started applying and, within three weeks, landed my first job at a European company with decent pay.</p>
-              <p>I quickly gained credibility and trust through the principles I developed over years of programming. Within a month, I received a 10% raise. In two months, I became the main developer. Three months later, another European company approached me, and I doubled my salary. In nine months, I gained lots of knowledge, and I tripled my initial salary. Now I'm being assigned on business-critical tasks and to coordinate the development of core product parts.</p>
+              <p className="mb-6">Breaking into the tech industry was tough. It took years of experimenting with different types of software—from websites to games and complex automation scripts—while dealing with heavy research, regular burnouts, and a lot of personal challenges. The three years leading up to my first job application were especially hard, but once I felt ready, I started applying. In just three weeks, I landed my first job at a European company with good pay.</p>
+              <p>I quickly built a reputation for reliability and expertise, thanks to the skills I learned from years of coding. Within a month, I got a 10% raise. By the end of two months, I was the lead developer. Three months into the job, another European company offered me a position that doubled my salary. Within nine months, my salary had tripled from where I started. Now, I'm tasked with business-critical projects and leading the development of key product features.</p>
           </>
         )
       },

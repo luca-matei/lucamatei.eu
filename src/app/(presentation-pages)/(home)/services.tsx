@@ -10,7 +10,6 @@ const tiers = [
     description: 'Ideal for individuals and small teams ready to kickstart their projects or overcome hurdles.',
     features: [
       '45-Minute Free Consultation',
-      'Private Lessons for Students',
       'Complete Solutions for Your Needs',
       'Product Design, Planning, and Architecture',
     ],
@@ -24,8 +23,7 @@ const tiers = [
     features: [
       'No onboarding fees',
       'Free bug fixes or money back',
-      'Self-documenting code',
-      'Built to scale',
+      'Reliable, scalable, and self-documenting code',
     ],
   },
 ]
@@ -33,8 +31,8 @@ const tiers = [
 export default function Services() {
   const content = {
     subtitle: "Services",
-    title: "I'll Build Your Next Big Thing",
-    description: "I specialize in building Python APIs for SaaS products, but I also have experience with Linux server management, Shopify integrations and LLMs.",
+    title: () => {return (<>Let's Create <b>Your</b> Next Big Hit!</>);},
+    description: "I focus on developing Python APIs for SaaS products, but I'm also skilled in managing Linux servers, integrating with Shopify, and working with Large Language Models.",
     discounted: {
       title: "Discounted",
       description: "Educational or social impact projects may qualify for a discount or pro-bono work. Other projects can get a lower rate if handled by the juniors I train, as I also have a full-time job or the projects are lower priority."
@@ -45,7 +43,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-base font-semibold leading-7 text-indigo-400">{content.subtitle}</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{content.title}</p>
+          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{content.title()}</p>
         </div>
         <div className="relative mt-6">
           <p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">{content.description}</p>
