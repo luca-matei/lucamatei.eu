@@ -32,7 +32,7 @@ export default function Services() {
   const content = {
     subtitle: "Services",
     title: () => {return (<>Let&apos;s Create <b>Your</b> Next Big Hit!</>);},
-    description: "I focus on developing Python APIs for SaaS products, but I&apos;m also skilled in managing Linux servers, integrating with Shopify, and working with Large Language Models.",
+    description: "I focus on developing Python APIs for SaaS products, but I'm also skilled in managing Linux servers, integrating with Shopify, and working with Large Language Models.",
     discounted: {
       title: "Discounted",
       description: "Educational or social impact projects may qualify for a discount or pro-bono work. Other projects can get a lower rate if handled by the juniors I train, as I also have a full-time job or the projects are lower priority."

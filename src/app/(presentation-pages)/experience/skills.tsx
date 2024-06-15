@@ -7,7 +7,7 @@ const skills = [
       icon: faPython,
       name: 'Python',
       description:
-        "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models. I&apos;m also teaching students and juniors to code in Python.",
+        "I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models. I'm also teaching students and juniors to code in Python.",
       tags: ['uwsgi', 'shopify', 'langchain', 'asyncio', 'openai', 'unittest', 'httpx', 'lxml', 'black'],
     },
     {
@@ -28,7 +28,7 @@ const skills = [
       icon: faLaptopCode,
       name: 'Frontend',
       description:
-        "I mainly work on backend development, but I&apos;m also good at making user interfaces and connecting them to the backend. In 2020, I built a CSS framework from the ground up to give websites a look similar to what you get with Tailwind CSS.",
+        "I mainly work on backend development, but I'm also good at making user interfaces and connecting them to the backend. In 2020, I built a CSS framework from the ground up to give websites a look similar to what you get with Tailwind CSS.",
       tags: ['nextjs', 'react', 'typescript', 'javascript', 'tailwindcss', 'bootstrap', 'material', 'sass'],
     },
     {
@@ -42,7 +42,7 @@ const skills = [
       icon: faShopify,
       name: 'Shopify',
       description:
-        "I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I&apos;m currently writing an open-source Python SDK aimed to be better documented and better structured than the official one.",
+        "I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I'm currently writing an open-source Python SDK aimed to be better documented and better structured than the official one.",
       tags: ['custom-app', 'webhooks', 'app-embeds', 'shopify-cli', 'admin-api', 'open-source'],
     },
 ]
