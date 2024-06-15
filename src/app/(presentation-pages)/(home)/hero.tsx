@@ -40,8 +40,8 @@ export default function Hero() {
             </div>
           </div>
           <img
-            src="ART00045.jpg"
-            alt=""
+            src="https://assets.lucamatei.eu/images/profile-picture.jpg"
+            alt="Profile Picture"
             className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
           />
         </div>
@@ -50,27 +50,3 @@ export default function Hero() {
     </div>
   )
 }
-
-{/*
-  <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-    <div className="mx-auto w-96 max-w-full">
-      <img
-        className="rounded-2xl" src="https://assets.lucamatei.eu/images/profile-picture.jpg"
-        alt="Luca Matei Profile Picture"
-      />
-      <div className="items-center mt-2 grid grid-cols-3 gap-4">
-        <a className="mx-auto" href="https://bcert.me/sipbjjrqi" target="_blank">
-          <img
-            className="h-24 w-24 rounded-xl" src="https://assets.lucamatei.eu/images/seal-csm.png"
-            alt="Certified ScrumMaster Badge"
-            />
-          </a>
-          <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-          </div>
-          <div className="mx-auto h-20 w-20 rounded-full bg-gray-50">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-*/}
