@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCloudArrowDown, faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {usePathname} from "next/navigation";
-import {ContactSection} from "@/app/(presentation-pages)/contact/page";
+import {ContactSection} from "@/app/(presentation-pages)/contact/ContactSection";
 
 const navigation = [
   { name: 'Home', href: '/' },

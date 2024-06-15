@@ -1,7 +1,7 @@
 const statuses: Record<string, string> = {
-  'Complete': 'text-green-700 bg-green-50 ring-green-600/20',
-  'Planned': 'text-gray-600 bg-gray-50 ring-gray-500/10',
-  'In progress': 'text-yellow-800 bg-yellow-50 ring-yellow-600/20',
+  "Complete": "text-green-700 bg-green-50 ring-green-600/20",
+  "Planned": "text-gray-600 bg-gray-50 ring-gray-500/10",
+  "In progress": "text-yellow-800 bg-yellow-50 ring-yellow-600/20",
 }
 
 interface Course {
@@ -18,58 +18,58 @@ interface Course {
 const courses = [
   {
     id: 1,
-    name: 'Backend Developer',
-    href: 'https://coursera.org/share/119d8b3955d78aa262873a5587bb1528',
-    status: 'Complete',
-    createdBy: 'Meta',
+    name: "Backend Developer",
+    href: "https://coursera.org/share/119d8b3955d78aa262873a5587bb1528",
+    status: "Complete",
+    createdBy: "Meta",
     courses: 9,
-    completedOn: 'Jun 25, 2023',
-    completedOnTime: '2023-06-25T00:00Z',
+    completedOn: "Jun 25, 2023",
+    completedOnTime: "2023-06-25T00:00Z",
   },
   {
     id: 2,
-    name: 'Machine Learning Specialization',
-    href: 'https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4',
-    status: 'In progress',
-    createdBy: 'IBM',
+    name: "Machine Learning Specialization",
+    href: "https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4",
+    status: "In progress",
+    createdBy: "IBM",
     courses: "1/6",
     completedOn: undefined,
     completedOnTime: undefined,
   },
   {
     id: 3,
-    name: 'Frontend Developer',
-    href: 'https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4',
-    status: 'Complete',
-    createdBy: 'Meta',
+    name: "Frontend Developer",
+    href: "https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4",
+    status: "Complete",
+    createdBy: "Meta",
     courses: 9,
     completedOn: undefined,
     completedOnTime: undefined,
   },
   {
     id: 4,
-    name: 'Python For Everybody',
-    href: 'https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4',
-    status: 'Complete',
-    createdBy: 'University of Michigan',
+    name: "Python For Everybody",
+    href: "https://www.coursera.org/user/aaae60f377016d8fe27a0ab27467edb4",
+    status: "Complete",
+    createdBy: "University of Michigan",
     courses: 5,
     completedOn: undefined,
     completedOnTime: undefined,
   },
   {
     id: 5,
-    name: 'IT Automation with Python',
-    href: 'https://coursera.org/share/ef006a0a91c90a0a6fc7b6a50cb44db6',
-    status: 'Complete',
-    createdBy: 'Google',
+    name: "IT Automation with Python",
+    href: "https://coursera.org/share/ef006a0a91c90a0a6fc7b6a50cb44db6",
+    status: "Complete",
+    createdBy: "Google",
     courses: 6,
-    completedOn: 'Dec 19, 2023',
-    completedOnTime: '2023-12-19T00:00Z',
+    completedOn: "Dec 19, 2023",
+    completedOnTime: "2023-12-19T00:00Z",
   },
 ]
 
 function classNames(...classes: any[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
 function Course(course: Course) {
@@ -81,7 +81,7 @@ function Course(course: Course) {
           <p
             className={classNames(
               statuses[course.status],
-              'rounded-md whitespace-nowrap mt-0.5 px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset'
+              "rounded-md whitespace-nowrap mt-0.5 px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset"
             )}
           >
             {course.status}
@@ -140,7 +140,7 @@ export default function Courses() {
                   <Course key={course.id} {...course} />
               ))}
             </ul>
-            <img src="/csm-certificate.jpg" className="w-full max-w-4xl my-5 h-auto border rounded-lg shadow-md" alt="Certificate"/>
+            <img src="https://assets.lucamatei.eu/images/csm-certificate.jpg" className="w-full max-w-4xl my-5 h-auto border rounded-lg shadow-md" alt="Certificate"/>
           </div>
         </div>
       </div>

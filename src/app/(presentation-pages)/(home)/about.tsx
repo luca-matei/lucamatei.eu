@@ -20,7 +20,7 @@ export default function About() {
         return (
             <>
               <p className="mb-6">Breaking into the tech industry was tough. It took years of experimenting with different types of software—from websites to games and complex automation scripts—while dealing with heavy research, regular burnouts, and a lot of personal challenges. The three years leading up to my first job application were especially hard, but once I felt ready, I started applying. In just three weeks, I landed my first job at a European company with good pay.</p>
-              <p>I quickly built a reputation for reliability and expertise, thanks to the skills I learned from years of coding. Within a month, I got a 10% raise. By the end of two months, I was the lead developer. Three months into the job, another European company offered me a position that doubled my salary. Within nine months, my salary had tripled from where I started. Now, I'm tasked with business-critical projects and leading the development of key product features.</p>
+              <p>I quickly built a reputation for reliability and expertise, thanks to the skills I learned from years of coding. Within a month, I got a 10% raise. By the end of two months, I was the lead developer. Three months into the job, another European company offered me a position that doubled my salary. Within nine months, my salary had tripled from where I started. Now, I&apos;m tasked with business-critical projects and leading the development of key product features.</p>
           </>
         )
       },

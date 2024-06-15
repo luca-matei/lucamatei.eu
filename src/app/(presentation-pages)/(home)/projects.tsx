@@ -11,7 +11,7 @@ export default function Projects() {
             Open Source Projects
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-            Check out over 14 repositories filled with websites, games, tools, and more. Most of these are developed in the courses I teach. I'll be adding more resources to my upcoming website, lucamatei.dev, soon!
+            Check out over 14 repositories filled with websites, games, tools, and more. Most of these are developed in the courses I teach. I&apos;ll be adding more resources to my upcoming website, lucamatei.dev, soon!
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
