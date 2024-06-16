@@ -6,8 +6,8 @@ export default function About() {
     description: () => {
       return (
         <>
-          <p className="mb-6">I started learning to code when I was just 7 years old and I’ve been hooked ever since. I aced all my computer science classes with perfect scores. In my sophomore year of high school, my teacher trusted me to lead a class on HTML and CSS. The following year, I ran an after-school web development course that attracted over 25 students for a whole semester.</p>
-          <p className="mb-6">Two years after finishing high school, I began consulting for small business owners and those just starting out in programming. I’m also working on some cool projects with large language models. I’m aiming to become a Solutions Architect and eventually take on more leadership roles. I’ve already earned my Scrum Master certification, and my commitment, perseverance, and passion for learning have really driven my success.</p>
+          <p className="mb-6">I started learning to code when I was 7 years old and I’ve been hooked ever since. I aced all my computer science classes. In my sophomore year of high school, my teacher assigned me to lead a class on HTML and CSS. The following year, I ran an after-school web development course that attracted roughly 30 students.</p>
+          <p className="mb-6">Two years after finishing high school, I began consulting for small business owners and those just starting out in programming. I’m also working on some cool projects with large language models. I’m aiming to become a Solutions Architect and eventually take on more leadership roles. I’ve earned my Scrum Master certification, and my commitment, perseverance, and passion for learning have really driven my success.</p>
           <p>My main goal is to keep getting better so I can encourage others to see learning about their passions as a
             vital part of life. Staying curious and willing to experiment has opened up incredible opportunities for
             personal and professional growth as a software developer.</p>
