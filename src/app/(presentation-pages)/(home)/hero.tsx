@@ -43,7 +43,7 @@ export default function Hero() {
                   <img src="logos/nextjs.png" className="mr-1 inline-block h-5 w-auto"/> Next.js
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/postgres.png" className="mr-1 inline-block h-5 w-auto"/> Postgres
+                  <img src="logos/postgresql.png" className="mr-1 inline-block h-5 w-auto"/> PostgreSQL
                 </p>
                 <p className="whitespace-nowrap">
                   <img src="logos/redis.png" className="mr-1 inline-block h-5 w-auto"/> Redis
@@ -57,7 +57,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="mt-10 flex items-center gap-x-6">
-              <a href="/experience" className="text-sm font-semibold leading-6 text-gray-900">
+              <a href="/experience" className="font-semibold text-gray-900">
                 See my full experience <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3 ml-1" aria-hidden="true"></FontAwesomeIcon>
               </a>
             </div>
