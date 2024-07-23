@@ -31,28 +31,28 @@ export default function Hero() {
               <h3 className="text-lg font-semibold">My everyday stack</h3>
               <div className="mt-2 grid grid-cols-4 text-gray-600">
                 <p className="whitespace-nowrap">
-                  <img src="logos/python.png" className="mr-1 inline-block h-5 w-auto"/> Python
+                  <img src="logos/python.png" className="mr-1 inline-block h-5 w-auto" alt="Python Logo"/> Python
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/fastapi.png" className="mr-1 inline-block h-5 w-auto"/> FastAPI
+                  <img src="logos/fastapi.png" className="mr-1 inline-block h-5 w-auto" alt="FastAPI Logo"/> FastAPI
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/typescript.png" className="mr-1 inline-block h-5 w-auto"/> TypeScript
+                  <img src="logos/typescript.png" className="mr-1 inline-block h-5 w-auto" alt="TypeScript Logo"/> TypeScript
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/nextjs.png" className="mr-1 inline-block h-5 w-auto"/> Next.js
+                  <img src="logos/nextjs.png" className="mr-1 inline-block h-5 w-auto" alt="Next.js Logo"/> Next.js
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/postgresql.png" className="mr-1 inline-block h-5 w-auto"/> PostgreSQL
+                  <img src="logos/postgresql.png" className="mr-1 inline-block h-5 w-auto" alt="PostgreSQL Logo"/> PostgreSQL
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/redis.png" className="mr-1 inline-block h-5 w-auto"/> Redis
+                  <img src="logos/redis.png" className="mr-1 inline-block h-5 w-auto" alt="Redis Logo"/> Redis
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/shopify.png" className="mr-1 inline-block h-5 w-auto"/> Shopify
+                  <img src="logos/shopify.png" className="mr-1 inline-block h-5 w-auto" alt="Shopify Logo"/> Shopify
                 </p>
                 <p className="whitespace-nowrap">
-                  <img src="logos/debian.png" className="mr-1 inline-block h-5 w-auto"/> Debian
+                  <img src="logos/debian.png" className="mr-1 inline-block h-5 w-auto" alt="Debian Logo"/> Debian
                 </p>
               </div>
             </div>
