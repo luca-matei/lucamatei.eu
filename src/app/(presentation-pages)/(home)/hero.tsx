@@ -7,7 +7,7 @@ export default function Hero() {
     title: () => {
       return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Full Stack Developer</span></>
     },
-    description: "I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.",
+    description: "I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective, scalable and flexible solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.",
   }
 
   return (
@@ -27,15 +27,38 @@ export default function Hero() {
             <p className="text-lg leading-8 text-gray-600">
               {content.description}
             </p>
+            <div className="mt-6 leading-8">
+              <h3 className="text-lg font-semibold">My everyday stack</h3>
+              <div className="mt-2 grid grid-cols-4 text-gray-600">
+                <p className="whitespace-nowrap">
+                  <img src="logos/python.png" className="mr-1 inline-block h-5 w-auto"/> Python
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/fastapi.png" className="mr-1 inline-block h-5 w-auto"/> FastAPI
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/typescript.png" className="mr-1 inline-block h-5 w-auto"/> TypeScript
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/nextjs.png" className="mr-1 inline-block h-5 w-auto"/> Next.js
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/postgres.png" className="mr-1 inline-block h-5 w-auto"/> Postgres
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/redis.png" className="mr-1 inline-block h-5 w-auto"/> Redis
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/shopify.png" className="mr-1 inline-block h-5 w-auto"/> Shopify
+                </p>
+                <p className="whitespace-nowrap">
+                  <img src="logos/debian.png" className="mr-1 inline-block h-5 w-auto"/> Debian
+                </p>
+              </div>
+            </div>
             <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="#about"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get Started
-              </a>
               <a href="/experience" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3 ml-1" aria-hidden="true"></FontAwesomeIcon>
+                See my full experience <FontAwesomeIcon icon={faArrowRightLong} className="inline h-3 ml-1" aria-hidden="true"></FontAwesomeIcon>
               </a>
             </div>
           </div>
