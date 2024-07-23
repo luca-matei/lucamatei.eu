@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCheck} from "@fortawesome/free-solid-svg-icons";
+import {faCheck, faExternalLink} from "@fortawesome/free-solid-svg-icons";
 
 const workplaces = [
   {
@@ -7,11 +7,19 @@ const workplaces = [
     role: 'Full Stack Developer',
     period: 'Oct 2023 - Present',
     type: 'Remote, Contract',
-    description: "",
+    description: <a href="https://getit.ai" target="_blank" rel="noopener noreferrer" className="text-indigo-600"><FontAwesomeIcon icon={faExternalLink} className="w-3 h-3 mr-0.5" aria-hidden="true" /> getit.ai</a>,
     bullets: [
-      'Developed and enhanced the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, improving search algorithms and optimizing storage connections.',
-      'Implemented a highly reusable component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.',
-      'Assisted in the onboarding process for new team members and participated in multiple code reviews.',
+      'Enhanced the custom RAG framework with reduced latency and costs, and new features - caching, full text search, knowledge base toggling.',
+      'Designed and implemented async-capable infrastructure for the API using PostgreSQL and Redis.',
+      'Developed tools and integrations for managing Shopify Carts, Orders, and Subscriptions.',
+      'Lead the development and maintenance of Shopify integrations and agent knowledge infrastructure.',
+      'Restructured the API to improve modularity and flexibility.',
+      'Created the first comprehensive test suite for the API.',
+      'Authored detailed technical documentation for client onboarding.',
+      'Built a custom testing environment for Shopify integrations.',
+      'Pioneered as one of the first employees, contributing through all startup phases.',
+      'Trusted with sensitive tasks, research, troubleshooting, and support.',
+      'Built the API’s initial CI/CD pipelines.',
     ],
   },
   {
@@ -54,7 +62,7 @@ export default function Workplaces() {
               <h3 className="text-sm leading-7 text-gray-600">{workplace.type}</h3>
               <p className="mt-4 text-base leading-7 text-gray-600">{workplace.description}</p>
             </div>
-            <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
+            <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2">
                 {workplace.bullets.map((bullet, index2) => (
                   <div key={index + 5 * index2} className="relative pl-9">
                     <dt>
