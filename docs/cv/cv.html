@@ -1,219 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @media print {
-            @page { size: letter; }
-            @page { size: A4; }
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.5;
-        }
-        .icon {
-            margin-right: 0.5rem;
-            width: 1rem;
-            text-align: center;
-        }
-        .fa-circle {
-            font-size: 0.25rem;
-            vertical-align: middle;
-            margin: 0 0.25rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+      @media print {
+          @page { size: letter; }
+          @page { size: A4; }
+      }
+      body {
+          font-family: 'Roboto', sans-serif;
+          line-height: 1.5;
+      }
+      .icon {
+          margin-right: 0.5rem;
+          width: 1rem;
+          text-align: center;
+      }
+      p, li {
+         font-size: 0.875rem/* 14px */;
+          line-height: 1.25rem/* 20px */;
+      }
+  </style>
 </head>
 <body class="container">
-    <div class="flex flex-wrap pb-10">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="opacity-0">Resume of</h2>
-            <h1 class="text-6xl font-bold">Luca Matei</h1>
-            <h2>Full Stack Developer</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600 flex flex-nowrap">
-            <div>
-                <ul class="list-none">
-                    <li><i class="fas fa-phone icon"></i>+40 771 344 046</li>
-                    <li><i class="fas fa-envelope icon"></i><a href="mailto:hello@lucamatei.eu" class="text-blue">hello@lucamatei.eu</a></li>
-                    <li><i class="fab fa-linkedin icon"></i><a href="https://linkedin.com/in/lucamatei" class="text-blue">lucamatei</a></li>
-                    <li><i class="fab fa-github icon"></i><a href="https://github.com/luca-matei" class="text-blue">luca-matei</a></li>
-                    <li><i class="fab fa-telegram icon"></i><a href="https://t.me/lucamatei" class="text-blue">lucamatei</a></li>
-                    <li><i class="fas fa-globe icon"></i><a href="https://lucamatei.eu" class="text-blue">https://lucamatei.eu</a></li>
-                    <li><i class="fas fa-map-marker-alt icon"></i>Bucharest, Romania</li>
-                </ul>
-            </div>
-            <div class="pl-10">
-                <img src="https://assets.lucamatei.eu/images/profile-picture.jpg" alt="Luca Matei" class="rounded-md w-40 h-40 mt-1">
-            </div>
-        </div>
+<div class="flex flex-wrap pb-10">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="sr-only">Resume of</h2>
+    <h1 class="text-5xl font-bold">Luca Matei</h1>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <div class="flex gap-x-8">
+      <ul class="list-none">
+        <li><i class="fas fa-phone icon"></i>+40 771 344 046</li>
+        <li><i class="fas fa-envelope icon"></i><a href="mailto:hello@lucamatei.eu" class="text-blue">hello@lucamatei.eu</a></li>
+        <li><i class="fas fa-globe icon"></i><a href="https://lucamatei.eu" class="text-blue">https://lucamatei.eu</a></li>
+        <li><i class="fas fa-map-marker-alt icon"></i>Bucharest, Romania</li>
+      </ul>
+      <ul class="list-none">
+        <li><i class="fab fa-linkedin icon"></i><a href="https://linkedin.com/in/lucamatei" class="text-blue">lucamatei</a></li>
+        <li><i class="fab fa-github icon"></i><a href="https://github.com/luca-matei" class="text-blue">luca-matei</a></li>
+        <li><i class="fab fa-telegram icon"></i><a href="https://t.me/lucamatei" class="text-blue">lucamatei</a></li>
+      </ul>
     </div>
-    <!-- Summary -->
-    <div class="flex flex-wrap pb-10">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-2xl font-bold">Summary</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p class="mt-2">I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.</p>
-        </div>
-    </div>
-    <!-- Experience -->
-    <div class="flex flex-wrap pb-2">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-2xl font-bold">Work Experience</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Full Stack Developer</h2>
-            <h2 class="text-lg pb-2.5 text-gray-600">getitAI, Inc.</h2>
-            <h2 class="text-sm text-gray-600">Oct 2023 - Present</h2>
-            <h2 class="text-sm text-gray-600">Remote, Contract</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <ul class="list-none">
-                <li class="mb-3">Developed and enhanced the knowledge base infrastructure for AI-driven sales agents, involving tasks such as refining database functionalities, improving search algorithms and optimizing storage connections.</li>
-                <li class="mb-3">Implemented a highly reusable component that enables pagination, full-text search, filtering, and sorting capabilities for dynamically updated tables, enhancing user experience and data accessibility.</li>
-                <li class="mb-3">Assisted in the onboarding process for new team members and participated in multiple code reviews.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-10">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Full Stack Developer</h2>
-            <h2 class="text-lg pb-2.5 text-gray-600">Signed NDA</h2>
-            <h2 class="text-sm text-gray-600">July 2023 - April 2024</h2>
-            <h2 class="text-sm text-gray-600">Remote, Contract</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <ul class="list-none">
-                <li class="mb-3">Played a key role in both designing and building vital API components, focusing on creating solutions that were both durable and capable of scaling effectively.</li>
-                <li class="mb-3">Led the complete redesign and implementation of a high-capacity system across multiple servers, optimizing for user-customizable request handling and efficiency.</li>
-                <li class="mb-3">Managed various DevOps tasks, including setting up CI/CD pipelines, load balancers, and databases, and performed maintenance on both bare-metal servers and VPSes, prioritizing security and high-availability.</li>
-                <li class="mb-3">Significantly improved API performance by overhauling its architecture, resulting in increased development speed, stability, scalability, and flexibility.</li>
-                <li class="mb-3">Developed and integrated a comprehensive credits system for the API, working with third-party subscription managers like Outseta.</li>
-                <li class="mb-3">Engaged in peer code reviews, providing constructive feedback to enhance code quality and team collaboration.</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Projects -->
-    <div class="flex flex-wrap pb-10">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-2xl font-bold">Projects</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p class="mt-2">I have over 14 repositories filled with websites, games, tools, and more on my Github. Most of these are developed in the courses I teach.</p>
-        </div>
-    </div>
-    <!-- Courses -->
-    <div class="flex flex-wrap pb-2">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-2xl font-bold">Education</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Certifications</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <ul class="list-none">
-                <li>Certified Scrum Master by Scrum Alliance</li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Courses</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <ul class="list-none">
-                <li>Backend Developer by Meta (9 courses)</li>
-                <li>Frontend Developer by Meta (9 courses)</li>
-                <li>IT Automation with Python by Google (6 courses)</li>
-                <li>Python for Everybody by University of Michigan (5 courses)</li>
-                <li>Machine Learning Specialization by IBM (1/6 courses)</li>
-            </ul>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-10">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Highschool</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>Colegiul Național „Mihai Viteazul” București</p>
-            <p>Mathematics and Informatics Profile</p>
-            <p>Graduated in 2022</p>
-        </div>
-    </div>
-    <!-- Skills -->
-    <div class="flex flex-wrap pb-2">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-2xl font-bold">Skills</h2>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Python</h2>
-            <p class="text-sm text-gray-600">#uwsgi #shopify #langchain #asyncio #openai #unittest #httpx #lxml #black</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models. I'm also teaching students and juniors to code in Python.</p>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Linux</h2>
-            <p class="text-sm text-gray-600">#debian #openssh #qemu #nftables #nfs #bind9 #isc-dhcp-server #dnsmasq #bash</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>Since getting my first computer, I've used Debian for everything from setting up servers and building networks to managing services and fixing system issues. I host my projects on VPSes that I manage myself.</p>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Backend</h2>
-            <p class="text-sm text-gray-600">#fastapi #postgresql #redis #celery #dramatiq #supabase #sqlalchemy #pydantic</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites. My code is self-documenting, scalable and consistent within design patterns.</p>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Frontend</h2>
-            <p class="text-sm text-gray-600">#nextjs #react #typescript #javascript #tailwindcss #bootstrap #material #sass</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>I mainly work on backend development, but I'm also good at making user interfaces and connecting them to the backend. In 2020, I built a CSS framework from the ground up to give websites a look similar to what you get with Tailwind CSS.</p>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">DevOps</h2>
-            <p class="text-sm text-gray-600">#railway #github-actions #hetzner #haproxy #pgbouncer #git #docker #prometheus #grafana #sentry #supervisor</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>I can install and take care of Linux, web, and database servers, along with containers, making sure they handle traffic smoothly. I've also set up systems for continuous integration and delivery, as well as monitoring tools.</p>
-        </div>
-    </div>
-    <div class="flex flex-wrap pb-6">
-        <div class="w-1/3 text-right pr-5">
-            <h2 class="text-lg">Shopify</h2>
-            <p class="text-sm text-gray-600">#custom-app #webhooks #app-embeds #shopify-cli #admin-api #open-source</p>
-        </div>
-        <div class="w-2/3 pl-5 text-gray-600">
-            <p>I've built integrations with Shopify involving Custom Apps, App Embeds, LLM tools for cart manipulation, and more. I'm currently writing an open-source Python SDK aimed to be better documented and better structured than the official one.</p>
-        </div>
-    </div>
+  </div>
+</div>
+<!-- Summary -->
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-xl font-bold">Summary</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective, scalable and flexible solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-md">Desired roles</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-1">Full Stack Developer, Python Developer or Software Consultant.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-10">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-md">Tech Stack</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-1">Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Shopify, Debian.</p>
+  </div>
+</div>
+<!-- Experience -->
+<div class="flex flex-wrap pb-2">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-xl font-bold">Experience</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-md">Full Stack Developer</h2>
+    <h2 class="text-md pb-2.5 text-gray-600">getitAI, Inc.</h2>
+    <h2 class="text-sm text-gray-600">Oct 2023 - Present</h2>
+    <h2 class="text-sm text-gray-600">Remote, Contract</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <ul class="list-none">
+      <li class="mb-2">Upgraded the RAG framework to reduce delays and costs, adding caching, full text search, and toggling for knowledge bases.</li>
+      <li class="mb-2">Built async-ready API infrastructure using PostgreSQL and Redis.</li>
+      <li class="mb-2">Created LLM tools to manage Shopify Carts, Orders, and Subscriptions.</li>
+      <li class="mb-2">Led development of Shopify integrations and systems for agent knowledge.</li>
+      <li class="mb-2">Redesigned API structure for easier updates and additions.</li>
+      <li class="mb-2">Developed the API's first complete set of automated tests.</li>
+      <li class="mb-2">Wrote clear, detailed setup guides for new clients.</li>
+      <li class="mb-2">Made a custom test system for Shopify integrations.</li>
+      <li class="mb-2">Joined as an early employee, helping in all stages of the startup.</li>
+      <li class="mb-2">Handled confidential tasks, research, problem-solving, and customer support.</li>
+      <li class="mb-2">Set up the automated build and deployment system for the API.</li>
+    </ul>
+  </div>
+</div>
+<div class="flex flex-wrap pb-10">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-md">Full Stack Developer</h2>
+    <h2 class="text-md pb-2.5 text-gray-600">Signed NDA</h2>
+    <h2 class="text-sm text-gray-600">July 2023 - April 2024</h2>
+    <h2 class="text-sm text-gray-600">Remote, Contract</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <ul class="list-none">
+      <li class="mb-2">Set up and managed key infrastructure: CI/CD pipelines, load balancers, and databases. Maintained servers to ensure security and minimize downtime.</li>
+      <li class="mb-2">Created and implemented a full credits system for the API, connecting it with external subscription services like Outseta.</li>
+      <li class="mb-2">Built and launched a multi-server system for handling custom user requests at high volumes.</li>
+      <li class="mb-2">Rebuilt the API's core structure, making it faster, more stable, and easier to expand.</li>
+    </ul>
+  </div>
+</div>
+<!-- Projects -->
+<div class="flex flex-wrap pb-10">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-xl font-bold">Projects</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I have 18 repositories filled with websites, APIs, games, tools, and more on <a href="https://github.com/luca-matei">my Github</a>. Most of these are developed in the courses I teach.</p>
+  </div>
+</div>
+<!-- Courses -->
+<div class="flex flex-wrap pb-2">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-xl font-bold">Education</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Certifications</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <ul class="list-none mt-2">
+      <li>Certified Scrum Master from Scrum Alliance</li>
+    </ul>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Courses</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <ul class="list-none mt-2">
+      <li>Backend Developer from Meta (9 courses)</li>
+      <li>Frontend Developer from Meta (9 courses)</li>
+      <li>IT Automation with Python from Google (6 courses)</li>
+      <li>Python for Everybody from University of Michigan (5 courses)</li>
+      <li>Machine Learning Specialization from IBM (1/6 courses)</li>
+    </ul>
+  </div>
+</div>
+<div class="flex flex-wrap pb-10">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Highschool</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600 mt-2">
+    <p>Colegiul Național „Mihai Viteazul” București</p>
+    <p>Mathematics and Informatics Profile</p>
+    <p>Graduated in 2022</p>
+  </div>
+</div>
+<!-- Skills -->
+<div class="flex flex-wrap pb-2">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-xl font-bold">Skills</h2>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Python</h2>
+    <p class="text-xs text-gray-600">#uwsgi #shopify #langchain #asyncio #openai #unittest #httpx #lxml #black</p>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I started coding in Python with the release of version 3.2 in 2011. My work spans scripting, gaming, web development, automation, and more recently, projects involving Large Language Models. I'm also teaching students and juniors to code in Python.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Linux</h2>
+    <p class="text-xs text-gray-600">#debian #openssh #qemu #nftables #nfs #bind9 #isc-dhcp-server #dnsmasq #bash</p>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">Since getting my first computer, I've used Debian for everything from setting up servers and building networks to managing services and fixing system issues. I host my projects on VPSes that I manage myself.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Backend</h2>
+    <p class="text-xs text-gray-600">#fastapi #postgresql #redis #celery #dramatiq #supabase #sqlalchemy #pydantic</p>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I work with ASGI REST APIs daily to support SaaS platforms. In 2020, I developed a framework on a uWSGI server to manage the backend of multiple presentation websites. My code is self-documenting, scalable and consistent within design patterns.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">Frontend</h2>
+    <p class="text-xs text-gray-600">#nextjs #react #typescript #javascript #tailwindcss #bootstrap #material #sass</p>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I mainly work on backend development, but I'm also good at making user interfaces and connecting them to the backend. In 2020, I built a CSS framework from the ground up to give websites a look similar to what you get with Tailwind CSS.</p>
+  </div>
+</div>
+<div class="flex flex-wrap pb-6">
+  <div class="w-1/4 text-right pr-4">
+    <h2 class="text-lg">DevOps</h2>
+    <p class="text-xs text-gray-600">#railway #github-actions #hetzner #haproxy #pgbouncer #git #docker #prometheus #grafana #sentry #supervisor</p>
+  </div>
+  <div class="w-3/4 pl-4 text-gray-600">
+    <p class="mt-2">I can install and take care of Linux, web, and database servers, along with containers, making sure they handle traffic smoothly. I've also set up systems for continuous integration and delivery, as well as monitoring tools.</p>
+  </div>
+</div>
 </body>
 </html>

@@ -48,7 +48,7 @@ export default function PresentationLayout({
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="https://assets.lucamatei.eu/files/luca-matei-resume-en.pdf" className="p-1 text-sm font-semibold leading-6 text-gray-900">
+            <a href="/luca-matei-resume-en.pdf" className="p-1 text-sm font-semibold leading-6 text-gray-900">
               Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
             </a>
           </div>
