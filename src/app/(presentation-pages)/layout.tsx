@@ -23,10 +23,10 @@ export default function PresentationLayout({
   return (
     <>
       <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-4 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
-          <div className="flex lg:flex-1">
+        <nav className="flex items-center justify-between p-4 sm:px-8 max-w-7xl mx-auto" aria-label="Global">
+          <div className="flex sm:flex-1">
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex sm:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -36,7 +36,7 @@ export default function PresentationLayout({
               <FontAwesomeIcon icon={faBars} className="h-6 w-6" aria-hidden="true"/>
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden sm:flex sm:gap-x-12">
             {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -47,13 +47,13 @@ export default function PresentationLayout({
                 </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden sm:flex sm:flex-1 sm:justify-end">
             <a href="/luca-matei-resume-en.pdf" className="p-1 text-sm font-semibold leading-6 text-gray-900">
               Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
             </a>
           </div>
         </nav>
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50"/>
           <Dialog.Panel
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
