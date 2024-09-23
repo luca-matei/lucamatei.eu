@@ -105,7 +105,7 @@ export function ContactSection() {
                   <FontAwesomeIcon icon={faMapPin} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
-                  Bucharest, Romania
+                  Rotterdam, South Holland, Netherlands
                 </dd>
               </div>
               <div className="flex gap-x-4">
