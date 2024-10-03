@@ -5,7 +5,7 @@ export const workplaces = [
   {
     company: 'getitAI, Inc.',
     role: 'Full Stack Developer with LLMs',
-    period: 'Oct 2023 - Present · 1 yr',
+    period: 'Oct 2023 - Present · 1yr',
     type: 'Remote, Contract',
     location: 'San Francisco, California, United States',
     description: "Key developer in a global team building AI Sales Agents. As the longest-tenured developer, I contributed to all stages of the startup. My work includes improving our custom RAG, building Shopify integrations from the ground up, setting up customers, working on critical infrastructure, and coordinating developers.",
@@ -27,7 +27,7 @@ export const workplaces = [
   {
     company: '',
     role: 'Software Developer and Consultant',
-    period: 'Jun 2023 - Present · 1 yr 4 mos',
+    period: 'Jun 2023 - Present · 1yr 4mos',
     type: 'Remote, Self-employed',
     location: 'European Economic Area',
     description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
@@ -47,7 +47,7 @@ export const workplaces = [
   {
     company: 'Signed NDA',
     role: 'Python Developer with LLMs',
-    period: 'Jul 2023 - Apr 2024 · 10 mos',
+    period: 'Jul 2023 - Apr 2024 · 10mos',
     type: 'Remote, Contract',
     location: 'European Economic Area',
     description: "Quickly progressed to lead developer and architect role. Reconstructed critical API and infrastructure components to improve throughput and maintainability. Delivered new system version 2 months ahead of the 1-year contract schedule.",
@@ -63,7 +63,7 @@ export const workplaces = [
   {
     company: '',
     role: 'Peer Mentor',
-    period: 'Jun 2022 - Jun 2023 · 1 yr 1 mo',
+    period: 'Jun 2022 - Jun 2023 · 1yr 1mo',
     type: 'Hybrid, Freelance',
     location: 'Bucharest, Romania',
     description: "Helped students learn procedural programming using C++ and Python. Wrote setup guides for various software tools.",

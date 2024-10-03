@@ -144,7 +144,7 @@ export function ContactSection() {
             </dl>
           </div>
           <p className="text-sm leading-5 text-gray-500 lg:block hidden">
-            &copy; 2024 Luca Matei. All rights reserved. Made in Romania.
+            &copy; 2024 Luca Matei. All rights reserved.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
@@ -281,7 +281,7 @@ export function ContactSection() {
               </div>
             </div>
             <p className="text-sm text-center leading-5 text-gray-500 mt-16 lg:hidden">
-              &copy; 2024 Luca Matei. All rights reserved. Made in Romania.
+              &copy; 2024 Luca Matei. All rights reserved.
             </p>
           </div>
         </form>

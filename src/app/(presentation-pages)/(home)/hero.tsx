@@ -3,11 +3,11 @@ import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   const content = {
-    subtitle: "Full Stack Developer",
+    subtitle: "Python Developer",
     title: () => {
-      return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Full Stack Developer</span></>
+      return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Python Developer</span></>
     },
-    description: "I've been writing software for 13 years and have spent the last year helping startups build their products by creating cost-effective, scalable and flexible solutions for their complex business needs. Outside of work, I share my thoughts on tech and help others learn to code.",
+    description: "Experienced impact-driven developer specializing in B2B startup environments. 14 years of programming experience, creator of open-source IaC tool, WSGI web framework, and utility-first CSS library. Authored technical guides for various software products. Proficient in Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Shopify, and Linux. Mentor for students and junior developers in procedural programming, web development, and LLMs. Open-source contributor to Pydantic. Built high-throughput e-commerce products in global, agile teams. Certified ScrumMaster with multiple Coursera certifications in full-stack development, AI, and Rust. Pursuing AWS certification.",
   }
 
   return (
