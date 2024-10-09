@@ -50,7 +50,7 @@ const skills = [
 export default function Skills() {
   const content = {
     title: "Skills I've Gained",
-    description: "Here's the knowledge I've gained from 14 years of coding and how I've applied it in my last year of professional experience.",
+    description: "Here's the knowledge I've gained from 14 years of coding and how I've applied it in my last two years of professional experience.",
   }
   return (
     <>
