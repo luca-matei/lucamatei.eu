@@ -3,10 +3,10 @@ import {faLongArrowRight, faCheck} from "@fortawesome/free-solid-svg-icons";
 
 const tiers = [
   {
-    name: "Software Consulting",
+    name: "Mentorship & Consulting",
     id: "tier-consulting",
     href: "#contact",
-    priceHourly: "€19",
+    priceHourly: "€30",
     description: "Ideal for individuals and small teams ready to kickstart their projects or overcome hurdles.",
     features: [
       "45-Minute Free Consultation",
@@ -15,10 +15,10 @@ const tiers = [
     ],
   },
   {
-    name: "Custom Software Development",
+    name: "Software Development",
     id: "tier-development",
     href: "#contact",
-    priceHourly: "€29",
+    priceHourly: "€50",
     description: "Perfect for those who need another hand on deck. I work best in fast-paced startup environments.",
     features: [
       "No onboarding fees",

@@ -5,7 +5,7 @@ export const workplaces = [
   {
     company: 'getitAI, Inc.',
     role: 'Full Stack Developer with LLMs',
-    period: 'Oct 2023 - Present · 1yr',
+    period: 'Oct 2023 - Present · 1yr 4mos',
     type: 'Remote, Contract',
     location: 'San Francisco, California, United States',
     description: "Key developer in a global team building AI Sales Agents. As the longest-tenured developer, I contributed to all stages of the startup. My work includes improving our custom RAG, building Shopify integrations from the ground up, setting up customers, working on critical infrastructure, and coordinating developers.",
@@ -13,7 +13,7 @@ export const workplaces = [
       {name: "getit.ai", url: "https://getit.ai/"},
     ],
     bullets: [
-      "Improved custom RAG framework with real-time updated product database integration, efficient query caching, vector database optimizations, full text search",
+      "Improved custom RAG framework with real-time updated product database integration, efficient query caching, vector database optimizations, hybrid search",
       "Developed async-ready API infrastructure for PostgreSQL, Redis and HTTP requests",
       "Created LLM tools to manage Shopify Carts, Orders, and Subscriptions",
       "Led development of Shopify integrations and systems for agent knowledge",
@@ -27,7 +27,7 @@ export const workplaces = [
   {
     company: '',
     role: 'Software Developer and Consultant',
-    period: 'Jun 2023 - Present · 1yr 4mos',
+    period: 'Jun 2023 - Present · 1yr 8mos',
     type: 'Remote, Self-employed',
     location: 'European Economic Area',
     description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
