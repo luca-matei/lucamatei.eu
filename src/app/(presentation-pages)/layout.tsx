@@ -22,7 +22,7 @@ export default function PresentationLayout({
 
   return (
     <>
-      <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50">
+      <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50 print:hidden">
         <nav className="flex items-center justify-between p-4 sm:px-8 max-w-7xl mx-auto" aria-label="Global">
           <div className="flex sm:flex-1">
           </div>
@@ -96,7 +96,9 @@ export default function PresentationLayout({
         </Dialog>
       </header>
       {children}
-      <ContactSection />
+      {currentPathname !== "/resume" &&
+        <ContactSection />
+      }
     </>
   )
 }

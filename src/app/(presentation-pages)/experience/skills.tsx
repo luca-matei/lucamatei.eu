@@ -1,6 +1,7 @@
 import {faLinux, faPython, faShopify} from "@fortawesome/free-brands-svg-icons";
 import {faCog, faLaptopCode, faServer} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {PROGRAMMING_YEARS} from "@/constants";
 
 const skills = [
     {
@@ -50,7 +51,7 @@ const skills = [
 export default function Skills() {
   const content = {
     title: "Skills I've Gained",
-    description: "Here's the knowledge I've gained from 14 years of coding and how I've applied it in my last two years of professional experience.",
+    description: `Here's the knowledge I've gained from ${PROGRAMMING_YEARS} years of coding and how I've applied it in my last two years of professional experience.`,
   }
   return (
     <>

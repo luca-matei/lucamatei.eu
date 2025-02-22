@@ -1,52 +1,67 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck, faExternalLink} from "@fortawesome/free-solid-svg-icons";
 
+const getElapsedPeriod = (startDate: string): string => {
+  const start = new Date(startDate);
+  const now = new Date();
+
+  const months = (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12 + 1;
+
+  return `${years}yr ${remainingMonths}mos`;
+};
+
+const getPresentDate = (): string => {
+  const now = new Date();
+  return now.toLocaleString('en-US', { month: 'short', year: 'numeric' });
+}
+
 export const workplaces = [
   {
-    company: 'getitAI, Inc.',
-    role: 'Full Stack Developer with LLMs',
-    period: 'Oct 2023 - Present · 1yr 4mos',
-    type: 'Remote, Contract',
-    location: 'San Francisco, California, United States',
-    description: "Key developer in a global team building AI Sales Agents. As the longest-tenured developer, I contributed to all stages of the startup. My work includes improving our custom RAG, building Shopify integrations from the ground up, setting up customers, working on critical infrastructure, and coordinating developers.",
-    references: [
-      {name: "getit.ai", url: "https://getit.ai/"},
-    ],
-    bullets: [
-      "Improved custom RAG framework with real-time updated product database integration, efficient query caching, vector database optimizations, hybrid search",
-      "Developed async-ready API infrastructure for PostgreSQL, Redis and HTTP requests",
-      "Created LLM tools to manage Shopify Carts, Orders, and Subscriptions",
-      "Led development of Shopify integrations and systems for agent knowledge",
-      "Redesigned API structure to simplify updates and additions",
-      "Implemented the API's first complete set of automated tests",
-      "Developed a custom test environment for Shopify integrations",
-      "Implemented the first automated build and deployment system for the API",
-      "Wrote documentation for the development team",
-    ],
-  },
-  {
     company: '',
-    role: 'Software Developer and Consultant',
-    period: 'Jun 2023 - Present · 1yr 8mos',
+    role: 'Software Engineer and Consultant',
+    period: `Jun 2023 - Present · ${getElapsedPeriod('June 2023')}`,
     type: 'Remote, Self-employed',
     location: 'European Economic Area',
     description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
     references: [],
     bullets: [
       "Invited speaker on AI at a Packet Coders event",
-      "Developing a SaaS product for over 11,000 Romanian homeowners associations",
       "Provided private tutoring on Large Language Models (LLMs)",
       "Advised startups on custom software solutions for employee timekeeping and network services",
       "Led weekly Python courses covering APIs, web scraping, and game development for junior developers",
-      "Completed freelance projects via Upwork and Fiverr",
       "Authored open-source learning materials",
       "Contributed to the Pydantic library",
       "Managed private Virtual Private Servers (VPSs) and DNS servers",
     ],
   },
   {
+    company: 'getitAI, Inc.',
+    role: 'Full Stack Engineer with LLMs',
+    period: `Oct 2023 - ${getPresentDate()} · ${getElapsedPeriod('October 2023')}`,
+    type: 'Remote, Contract',
+    location: 'San Francisco, California, United States',
+    description: "Key engineer in a global team building AI Sales Agents. As the longest-tenured engineer, I contributed to all stages of the startup. My work includes improving our custom RAG, building Shopify integrations from the ground up, setting up customers, working on critical infrastructure, and coordinating developers.",
+    references: [
+      {name: "getit.ai", url: "https://getit.ai/"},
+    ],
+    bullets: [
+      "Improved custom RAG framework with real-time updated product database integration, efficient query caching, vector database optimizations, hybrid search",
+      "Developed async-ready API infrastructure for PostgreSQL and Redis",
+      "Created LLM tools to manage Shopify Carts, Orders, and Subscriptions",
+      "Led development of Shopify integrations and systems for agent knowledge",
+      "Redesigned API structure to simplify updates and additions",
+      "Developed a custom test environment for Shopify integrations",
+      "Implemented the first CI/CD pipelines for the API",
+      "Wrote documentation for the development team",
+    ],
+  },
+  {
     company: 'Signed NDA',
-    role: 'Python Developer with LLMs',
+    role: 'Python Developer with DevOps',
     period: 'Jul 2023 - Apr 2024 · 10mos',
     type: 'Remote, Contract',
     location: 'European Economic Area',

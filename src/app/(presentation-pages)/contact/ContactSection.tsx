@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import {toast} from "react-toastify";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faExternalLink, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
+import CalendlyBanner from "@/app/(presentation-pages)/contact/CalendlyBanner";
+import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
+import {getCurrentYear} from "@/utils";
 
 export function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -86,11 +89,10 @@ export function ContactSection() {
   }
 
   return (
-    <>
-    <div id="contact" className="relative isolate h-full">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-          <div className="grow mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+    <div id="contact" className="relative isolate h-full print:hidden">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2">
+        <div className="flex flex-col relative lg:static px-6 lg:px-8 pb-12 lg:pb-0 pt-24 sm:pt-32 lg:pt-40">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
             <div
               className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
             </div>
@@ -98,14 +100,14 @@ export function ContactSection() {
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Drop me a line if you think we can team up or if you have any questions.
             </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <dl className="mt-10 space-y-3 text-base leading-7 text-gray-600">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
                   <FontAwesomeIcon icon={faMapPin} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
                 <dd>
-                  Rotterdam, South Holland, Netherlands
+                  {LOCATION}
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -113,42 +115,36 @@ export function ContactSection() {
                   <span className="sr-only">Telephone</span>
                   <FontAwesomeIcon icon={faPhone} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
-                <dd>
-                  <a className="hover:text-gray-900" href="tel:+40 771 344 046">
-                    +40 771 344 046
-                  </a>
-                </dd>
+                <dd>{PHONE_NUMBER}</dd>
               </div>
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
                   <FontAwesomeIcon icon={faEnvelope} className="h-7 w-6 text-gray-400" aria-hidden="true"/>
                 </dt>
-                <dd>
-                  <a className="hover:text-gray-900" href="mailto:hello@lucamatei.eu">
-                    hello@lucamatei.eu
-                  </a>
-                </dd>
+                <dd>{EMAIL}</dd>
               </div>
               <div className="flex items-center space-x-4 text-gray-400">
-                <a href="https://t.me/lucamatei" target="_blank" rel="noopener noreferrer">
+                <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTelegram} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
                 </a>
-                <a href="https://www.linkedin.com/in/lucamatei" target="_blank" rel="noopener noreferrer">
+                <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
                 </a>
-                <a href="https://github.com/luca-matei" target="_blank" rel="noopener noreferrer">
+                <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} className="h-7 w-6 hover:text-gray-900 cursor-pointer"/>
                 </a>
               </div>
             </dl>
           </div>
-          <p className="text-sm leading-5 text-gray-500 lg:block hidden">
-            &copy; 2024 Luca Matei. All rights reserved.
+          <span className={"grow"}></span>
+          <p className="text-sm leading-5 text-gray-500 hidden lg:block">
+            &copy; 2017-{getCurrentYear()} Luca Matei. All rights reserved.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <form onSubmit={handleSubmit} className="px-6 lg:px-8 pt-12 lg:pt-40">
           <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
+            <CalendlyBanner />
             <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
               {/* First Name Field */}
               <div>
@@ -168,8 +164,8 @@ export function ContactSection() {
                     placeholder="John"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-sm ${firstNameValidation ? 'opacity-100' : 'opacity-0'}`}>
-                    {firstNameValidation || 'Placeholder text for spacing'}
+                  <p className={`mt-2 text-red-500 text-sm ${firstNameValidation ? 'block' : 'hidden'}`}>
+                    {firstNameValidation}
                   </p>
                 </div>
               </div>
@@ -190,8 +186,8 @@ export function ContactSection() {
                     placeholder="Doe"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-sm ${lastNameValidation ? 'opacity-100' : 'opacity-0'}`}>
-                    {lastNameValidation || 'Placeholder text for spacing'}
+                  <p className={`mt-2 text-red-500 text-sm ${lastNameValidation ? 'block' : 'hidden'}`}>
+                    {lastNameValidation}
                   </p>
                 </div>
               </div>
@@ -212,8 +208,8 @@ export function ContactSection() {
                     placeholder="john.doe@example.com"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-sm ${emailValidation ? 'opacity-100' : 'opacity-0'}`}>
-                    {emailValidation || 'Placeholder text for spacing'}
+                  <p className={`mt-2 text-red-500 text-sm ${emailValidation ? 'block' : 'hidden'}`}>
+                    {emailValidation}
                   </p>
                 </div>
               </div>
@@ -234,13 +230,13 @@ export function ContactSection() {
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     title="Expected format: +1234567890 or 1234567890"
                   />
-                  <p className={`mt-2 text-red-500 text-sm ${phoneValidation ? 'opacity-100' : 'opacity-0'}`}>
-                    {phoneValidation || 'Placeholder text for spacing'}
+                  <p className={`mt-2 text-red-500 text-sm ${phoneValidation ? 'block' : 'hidden'}`}>
+                    {phoneValidation}
                   </p>
                 </div>
               </div>
               {/* Message Field */}
-              <div className="sm:col-span-2">
+              <div className={"sm:col-span-2"}>
                 <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
                   Message <span className="text-red-500">*</span>
                 </label>
@@ -254,16 +250,23 @@ export function ContactSection() {
                     maxLength={4096}
                     onBlur={validateMessage}
                     placeholder={"Hey Luca, I'd like to talk about..."}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full min-h-32 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
-                  <p className={`mt-2 text-red-500 text-sm ${messageValidation ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className={`mt-2 text-red-500 text-sm ${messageValidation ? 'block' : 'hidden'}`}>
                     {messageValidation || 'Placeholder text for spacing'}
                   </p>
                 </div>
+              </div>
+              {/* Disclaimer */}
+              <div className="sm:col-span-2">
                 <p className={"text-gray-400 text-sm"}>
-                  <span className={"font-bold"}>Disclaimer:</span> The information you provide through the contact form on this website is not stored or processed on my servers. Instead, it is sent directly to my email. You can verify this process in the <a href={"https://github.com/luca-matei/lucamatei.eu"} target={"_blank"} className={"underline underline-offset-4"}>source code</a>. The data will be used solely to respond to your message.
+                  <span className={"font-bold"}>Disclaimer:</span> The information you provide through the contact form
+                  on this website is not stored or processed on my servers. Instead, it is sent directly to my email.
+                  You can verify this process in the <a href={`${GITHUB_URL}/lucamatei.eu`} target={"_blank"} className={"underline underline-offset-4 inline-flex items-center"} rel="noopener noreferrer">source code <FontAwesomeIcon icon={faExternalLink} className={"inline ml-1 w-2.5 h-2.5"}/></a>.
+                  The data will be used solely to respond to your message.
                 </p>
               </div>
+              {/* Submit Button */}
               <div className="sm:col-span-2 mt-8 flex justify-end">
                 <button
                   type="submit"
@@ -280,13 +283,12 @@ export function ContactSection() {
                 </button>
               </div>
             </div>
-            <p className="text-sm text-center leading-5 text-gray-500 mt-16 lg:hidden">
-              &copy; 2024 Luca Matei. All rights reserved.
+            <p className="text-sm text-center leading-5 text-gray-500 my-12 lg:hidden">
+              &copy; 2017-{getCurrentYear()} Luca Matei. All rights reserved.
             </p>
           </div>
         </form>
       </div>
     </div>
-    </>
   )
 }

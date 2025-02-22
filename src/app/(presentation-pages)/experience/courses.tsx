@@ -110,6 +110,7 @@ function Course(course: Course) {
             href={course.href}
             target="_blank"
             className="hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:block"
+            rel="noopener noreferrer"
         >
           View certificate<span className="sr-only">, {course.name}</span>
         </a>

@@ -10,7 +10,7 @@ export default function About() {
           <p className="mb-6">Two years after finishing high school, I began consulting for small business owners and those just starting out in programming. I’m also working on some cool projects with large language models. I’m aiming to become a Solutions Architect and eventually take on more leadership roles. I’ve earned my Scrum Master certification, and my commitment, perseverance, and passion for learning have really driven my success.</p>
           <p>My main goal is to keep getting better so I can encourage others to see learning about their passions as a
             vital part of life. Staying curious and willing to experiment has opened up incredible opportunities for
-            personal and professional growth as a software developer.</p>
+            personal and professional growth as a software engineer.</p>
         </>
       )
     },
