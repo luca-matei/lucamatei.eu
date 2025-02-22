@@ -16,7 +16,7 @@ export default function Hero() {
         className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div
           className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <h1
@@ -29,7 +29,7 @@ export default function Hero() {
             </p>
             <div className="mt-6 leading-8">
               <h3 className="text-lg font-semibold">My everyday stack</h3>
-              <div className="mt-2 grid grid-cols-4 text-gray-600">
+              <div className="mt-2 grid grid-cols-3 sm:grid-cols-4 text-gray-600">
                 <p className="whitespace-nowrap">
                   <img src="logos/python.png" className="mr-1 inline-block h-5 w-auto" alt="Python Logo"/> Python
                 </p>

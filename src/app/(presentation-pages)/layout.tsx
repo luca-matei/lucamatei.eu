@@ -5,12 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCloudArrowDown, faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {usePathname} from "next/navigation";
 import {ContactSection} from "@/app/(presentation-pages)/contact/ContactSection";
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Experience', href: '/experience' },
-  { name: 'Contact', href: '/contact' },
-]
+import {NAVIGATION} from "@/constants";
 
 export default function PresentationLayout({
   children,
@@ -37,7 +32,7 @@ export default function PresentationLayout({
             </button>
           </div>
           <div className="hidden sm:flex sm:gap-x-12">
-            {navigation.map((item) => (
+            {NAVIGATION.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -71,7 +66,7 @@ export default function PresentationLayout({
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {NAVIGATION.map((item) => (
                       <a
                           key={item.name}
                           href={item.href}

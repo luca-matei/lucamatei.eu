@@ -30,8 +30,8 @@ const CalendlyBanner = () => {
   };
 
   return (
-    <div className={"flex justify-between items-center p-3.5 mb-5 bg-indigo-600 text-white rounded-md shadow-sm"}>
-      <span className={"font-bold"}>Longer than an email?</span>
+    <div className={"flex flex-col sm:flex-row space-y-3.5 sm:space-y-0 justify-between items-center p-3.5 mb-5 bg-indigo-600 text-white rounded-md shadow-sm"}>
+      <span className={"font-bold block"}>Longer than an email?</span>
       <button
         onClick={openCalendly}
         className="bg-white text-sm text-indigo-600 font-semibold py-2 px-4 rounded-md shadow-sm"
