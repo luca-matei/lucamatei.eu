@@ -5,3 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+.blog_post > h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
