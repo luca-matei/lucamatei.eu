@@ -6,6 +6,7 @@ import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-ico
 import CalendlyBanner from "@/app/(presentation-pages)/contact/CalendlyBanner";
 import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
 import {getCurrentYear} from "@/utils";
+import Footer from "@/components/Footer";
 
 export function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -283,9 +284,9 @@ export function ContactSection() {
                 </button>
               </div>
             </div>
-            <p className="text-sm text-center leading-5 text-gray-500 my-12 lg:hidden">
-              &copy; 2017-{getCurrentYear()} Luca Matei. All rights reserved.
-            </p>
+            <div className="lg:hidden">
+              <Footer />
+            </div>
           </div>
         </form>
       </div>
