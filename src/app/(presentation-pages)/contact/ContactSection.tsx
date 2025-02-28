@@ -3,7 +3,7 @@ import {toast} from "react-toastify";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faExternalLink, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
-import CalendlyBanner from "@/app/(presentation-pages)/contact/CalendlyBanner";
+import CalBanner from "@/app/(presentation-pages)/contact/CalBanner";
 import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
 import {getCurrentYear} from "@/utils";
 import Footer from "@/components/Footer";
@@ -145,7 +145,7 @@ export function ContactSection() {
         </div>
         <form onSubmit={handleSubmit} className="px-6 lg:px-8 pt-12 lg:pt-40">
           <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
-            <CalendlyBanner />
+            <CalBanner />
             <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
               {/* First Name Field */}
               <div>
