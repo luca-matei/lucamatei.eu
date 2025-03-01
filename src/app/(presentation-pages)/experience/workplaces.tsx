@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheck, faExternalLink} from "@fortawesome/free-solid-svg-icons";
+import ExternalLink from "@/components/ExternalLink";
 
 const getElapsedPeriod = (startDate: string): string => {
   const start = new Date(startDate);
@@ -117,11 +118,9 @@ export default function Workplaces() {
                 <p className="mt-4 text-base leading-7 text-gray-600">{workplace.description}</p>
                 <div className="mt-4">
                   {workplace.references.map((reference, index2) => (
-                    <a key={index + 5 * index2} href={reference.url} target="_blank" rel="noopener noreferrer"
-                       className="inline-flex items-center text-indigo-600 hover:text-indigo-700">
+                    <ExternalLink key={index + 5 * index2} href={reference.url}>
                       {reference.name}
-                      <FontAwesomeIcon icon={faExternalLink} className="w-3 h-3 ml-0.5" aria-hidden="true"/>
-                    </a>
+                    </ExternalLink>
                   ))}
                 </div>
               </div>

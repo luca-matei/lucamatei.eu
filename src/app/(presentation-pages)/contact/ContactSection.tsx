@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import {toast} from "react-toastify";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faExternalLink, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
 import CalBanner from "@/app/(presentation-pages)/contact/CalBanner";
 import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
 import {getCurrentYear} from "@/utils";
 import Footer from "@/components/Footer";
+import ExternalLink from "@/components/ExternalLink";
 
 export function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -263,7 +264,7 @@ export function ContactSection() {
                 <p className={"text-gray-400 text-sm"}>
                   <span className={"font-bold"}>Disclaimer:</span> The information you provide through the contact form
                   on this website is not stored or processed on my servers. Instead, it is sent directly to my email.
-                  You can verify this process in the <a href={`${GITHUB_URL}/lucamatei.eu`} target={"_blank"} className={"underline underline-offset-4 inline-flex items-center"} rel="noopener noreferrer">source code <FontAwesomeIcon icon={faExternalLink} className={"inline ml-1 w-2.5 h-2.5"}/></a>.
+                  You can verify this process in the <ExternalLink href={`${GITHUB_URL}/lucamatei.eu`}>source code</ExternalLink>.
                   The data will be used solely to respond to your message.
                 </p>
               </div>

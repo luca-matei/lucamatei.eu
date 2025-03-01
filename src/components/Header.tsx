@@ -22,10 +22,10 @@ export default function Header() {
 
   return (
     <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50 print:hidden">
-      <nav className="flex items-center justify-between p-4 sm:px-8 max-w-7xl mx-auto" aria-label="Global">
-        <div className="flex sm:flex-1">
+      <nav className="flex items-center justify-between p-4 md:px-8 max-w-7xl mx-auto" aria-label="Global">
+        <div className="flex md:flex-1">
         </div>
-        <div className="flex sm:hidden">
+        <div className="flex md:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -35,7 +35,7 @@ export default function Header() {
             <FontAwesomeIcon icon={faBars} className="h-6 w-6" aria-hidden="true"/>
           </button>
         </div>
-        <div className="hidden sm:flex sm:gap-x-12">
+        <div className="hidden md:flex md:gap-x-12">
           {NAVIGATION.map((item) => (
             <a
               key={item.name}
@@ -46,16 +46,19 @@ export default function Header() {
             </a>
           ))}
         </div>
-        <div className="hidden sm:flex sm:flex-1 sm:justify-end">
-          <a href="/luca-matei-resume-en.pdf" className="p-1 text-sm font-semibold leading-6 text-gray-900">
+        <div className="hidden md:flex md:flex-1 md:justify-end">
+          <a href={"/dear-recruiters"} className="px-2 text-sm text-right font-semibold leading-6 text-gray-900 border-r border-gray-900/10">
+            Dear Recruiters
+          </a>
+          <a href="/luca-matei-resume-en.pdf" className="whitespace-nowrap px-2 text-sm font-semibold leading-6 text-gray-900">
             Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
           </a>
         </div>
       </nav>
-      <Dialog as="div" className="sm:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog as="div" className="md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50"/>
         <Dialog.Panel
-          className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 md:max-w-sm md:ring-1 md:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <span></span>
             <button
@@ -82,8 +85,13 @@ export default function Header() {
                 ))}
               </div>
               <div className="py-6">
+                <a href={"/dear-recruiters"}
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Dear Recruiters
+                </a>
                 <a
-                  href="https://assets.lucamatei.eu/files/luca-matei-resume-en.pdf"
+                  href="/luca-matei-resume-en.pdf"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Resume<FontAwesomeIcon icon={faCloudArrowDown} className="ml-2 h-4 w-4" aria-hidden="true"/>
