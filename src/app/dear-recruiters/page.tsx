@@ -51,17 +51,17 @@ function FAQContent() {
   return (
     <>
       <div>
-        <h2 className={"text-3xl"}>Dear Recruiters,</h2>
+        <h2 className={"text-3xl font-bold mb-3"}>Dear Recruiters,</h2>
         <p>To help us use our time efficiently, I&apos;ve created a list of common questions with answers. This
           information
           can help prepare for our conversation or provide quick answers to initial questions you might have.</p>
       </div>
       {faq.map((qa, idx) => (
         <div key={idx} className={"mt-10"}>
-          <h3>{qa.question}</h3>
-          <h4>Short answer</h4>
+          <h3 className={"text-xl font-bold mb-2"}>{qa.question}</h3>
+          <h4 className={"font-bold mb-1"}>Short answer</h4>
           <p className={"mb-3 text-gray-600"}>{qa.short_answer}</p>
-          <h4>Long answer</h4>
+          <h4 className={"font-bold mb-1"}>Long answer</h4>
           <p className={"mb-3 text-gray-600"}>{qa.long_answer}</p>
         </div>
       ))}
