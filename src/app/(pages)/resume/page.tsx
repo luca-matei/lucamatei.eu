@@ -72,7 +72,7 @@ export default function Resume() {
             <h2 className="text-md">Desired roles</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-0.5">Full Stack Engineer or Software Engineer</p>
+            <p className="mt-0.5">Senior / Middle Full Stack Engineer or Software Engineer</p>
           </div>
         </div>
         <div className="flex flex-wrap pb-10">
@@ -102,11 +102,12 @@ export default function Resume() {
             </div>
             <div className="w-3/4 pl-4 text-gray-600">
               <p className="mb-2.5">{workplace.description}</p>
-              <ul className="!list-disc pl-4">
+              <ul className="!list-disc pl-4 mb-2.5">
                 {workplace.bullets.map((bullet, index2) => (
                   <li key={index + 5 * index2}>{bullet}</li>
                 ))}
               </ul>
+              <p>Tech Stack: {workplace.tech_stack}</p>
             </div>
           </div>
         ))}

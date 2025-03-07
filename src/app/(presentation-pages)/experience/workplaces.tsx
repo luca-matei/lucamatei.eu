@@ -22,27 +22,9 @@ const getPresentDate = (): string => {
 
 export const workplaces = [
   {
-    company: '',
-    role: 'Software Engineer and Consultant',
-    period: `Jun 2023 - Present · ${getElapsedPeriod('June 2023')}`,
-    type: 'Remote, Self-employed',
-    location: 'European Economic Area',
-    description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
-    references: [],
-    bullets: [
-      "Invited speaker on AI at a Packet Coders event",
-      "Provided private tutoring on Large Language Models (LLMs)",
-      "Advised startups on custom software solutions for employee timekeeping and network services",
-      "Led weekly Python courses covering APIs, web scraping, and game development for junior developers",
-      "Authored open-source learning materials",
-      "Contributed to the Pydantic library",
-      "Managed private Virtual Private Servers (VPSs) and DNS servers",
-    ],
-  },
-  {
     company: 'getitAI, Inc.',
-    role: 'Full Stack Engineer with LLMs',
-    period: `Oct 2023 - ${getPresentDate()} · ${getElapsedPeriod('October 2023')}`,
+    role: 'Senior Full Stack Engineer with LLMs',
+    period: `Oct 2023 - Present · ${getElapsedPeriod('October 2023')}`,
     type: 'Remote, Contract',
     location: 'San Francisco, California, United States',
     description: "Key engineer in a global team building AI Sales Agents. As the longest-tenured engineer, I contributed to all stages of the startup. My work includes improving our custom RAG, building Shopify integrations from the ground up, setting up customers, working on critical infrastructure, and coordinating developers.",
@@ -59,6 +41,26 @@ export const workplaces = [
       "Implemented the first CI/CD pipelines for the API",
       "Wrote documentation for the development team",
     ],
+    tech_stack: "Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Shopify, AWS",
+  },
+  {
+    company: '',
+    role: 'Software Engineer and Consultant',
+    period: `Jun 2023 - Present · ${getElapsedPeriod('June 2023')}`,
+    type: 'Remote, Self-employed',
+    location: 'European Economic Area',
+    description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
+    references: [],
+    bullets: [
+      "Invited speaker on AI at a Packet Coders event",
+      "Provided private tutoring on Large Language Models (LLMs)",
+      "Advised startups on custom software solutions for employee timekeeping and network services",
+      "Led weekly Python courses covering APIs, web scraping, and game development for junior developers",
+      "Authored open-source learning materials",
+      "Contributed to the Pydantic library",
+      "Managed private Virtual Private Servers (VPSs) and DNS servers",
+    ],
+    tech_stack: "Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Linux",
   },
   {
     company: 'Signed NDA',
@@ -75,6 +77,7 @@ export const workplaces = [
       "Established and managed essential infrastructure including CI/CD pipelines, load balancers, and databases",
       "Maintained servers to ensure security and minimize downtime",
     ],
+    tech_stack: "Python, FastAPI, PostgreSQL, Redis, Linux, HAProxy, Docker",
   },
   {
     company: '',
@@ -90,6 +93,7 @@ export const workplaces = [
       "Tutored 15+ students in procedural programming",
       "Helped build websites for a high school and local bakery",
     ],
+    tech_stack: "Python, C++",
   },
 ]
 
