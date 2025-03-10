@@ -34,11 +34,8 @@ jobs:
           mv /home/${{ secrets.USERNAME }}/digital_marmot/${{ vars.APP_NAME }}-temp /home/${{ secrets.USERNAME }}/digital_marmot/${{ vars.APP_NAME }}
           
           cd /home/${{ secrets.USERNAME }}/digital_marmot/${{ vars.APP_NAME }}
-
-          echo "SENDGRID_RECEIVER=${{ secrets.SENDGRID_RECEIVER }}" > .env
-          echo "SENDGRID_SENDER=${{ secrets.SENDGRID_SENDER }}" >> .env
-          echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env
-          echo "NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}" >> .env
+          
+          /bin/bash build.sh
 
           yarn install
           yarn build
