@@ -141,7 +141,7 @@ export default function Courses() {
                   <Course key={course.id} {...course} />
               ))}
             </ul>
-            <img src="https://assets.lucamatei.eu/images/csm-certificate.jpg" className="w-full max-w-4xl my-5 h-auto border rounded-lg shadow-md" alt="Certificate"/>
+            <img src="/csm-certificate.jpg" className="w-full max-w-4xl my-5 h-auto border rounded-lg shadow-md" alt="Certificate"/>
           </div>
         </div>
       </div>
