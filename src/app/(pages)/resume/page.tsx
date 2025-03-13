@@ -92,13 +92,15 @@ export default function Resume() {
           </div>
         </div>
         {workplaces.map((workplace, index) => (
-          <div key={index} className="flex flex-wrap pb-10">
-            <div className="w-1/4 pr-4">
+          <div key={index} className={`flex flex-wrap pb-10 ${index == 1 ? "break-before-page" : ""}`}>
+            <div className="w-1/4 pr-4 text-sm">
               <h2 className="text-md pb-2.5">{workplace.role}</h2>
-              <h2 className="text-sm text-gray-600">{workplace.company}</h2>
-              <h2 className="text-sm text-gray-600 whitespace-nowrap">{workplace.period}</h2>
-              <h2 className="text-sm text-gray-600">{workplace.type}</h2>
-              <h2 className="text-sm pb-2.5 text-gray-600">{workplace.location}</h2>
+              <h2 className="text-gray-600">{workplace.company}</h2>
+              <h2 className="text-gray-600 whitespace-nowrap">{workplace.period}</h2>
+              <h2 className="text-gray-600">{workplace.type}</h2>
+              <h2 className="pb-2.5 text-gray-600">{workplace.location}</h2>
+              <hr/>
+              <h2 className="py-2.5 text-gray-600">{workplace.tech_stack}</h2>
             </div>
             <div className="w-3/4 pl-4 text-gray-600">
               <p className="mb-2.5">{workplace.description}</p>
@@ -107,18 +109,48 @@ export default function Resume() {
                   <li key={index + 5 * index2}>{bullet}</li>
                 ))}
               </ul>
-              <p>Tech Stack: {workplace.tech_stack}</p>
             </div>
           </div>
         ))}
         {/* Projects */}
-        <div className="flex flex-wrap pb-10">
+        <div className="flex flex-wrap pb-2 break-before-page">
           <div className="w-1/6 pr-4">
             <h2 className="text-xl font-bold">Projects</h2>
           </div>
+        </div>
+        <div className="flex flex-wrap pb-10">
+          <div className="w-1/6 pr-4">
+            <h2 className="text-md pb-2.5">Digital Marmot / Dima</h2>
+          </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-2">I have 18 repositories filled with websites, APIs, games, tools, and more on <a
-              href={GITHUB_URL}>my Github</a>. Most of these are developed in the courses I teach.</p>
+            <p className="mb-2.5">
+              <i>
+                This project was developed before the use of large language models in programming and before I discovered Ansible and TailwindCSS.<br/>
+              </i>
+              <br/>
+              This tool is a complete Python-based solution for building and deploying virtual machines, networks, and web apps in a home lab. It features a command line interface with history and a Tkinter GUI, offering over 65 commands.<br/>
+              <br/>
+              It can configure and manage Git repositories, uWSGI servers, Nginx web servers, Let’s Encrypt SSL certificates, system services, Bind DNS servers, DHCP servers, SSH keys, GPG keys, PostgreSQL servers, nftables firewalls (with geo-blocking and port knocking), development, staging, and production environments, as well as preseed Debian virtual machines. Configurations are based on a custom templating system, with every setting carefully selected by me.<br/>
+              <br/>
+              Websites are built on a custom web framework based on the WSGI application. They support multilingual content using a YAML-based CMS for managing static, blog, and gallery content.<br/>
+              <br/>
+              The frontend of the websites uses a SCSS-based library for multimedia structure, spacing, color palettes, UI components, and animations.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap pb-10">
+          <div className="w-1/6 pr-4">
+            <h2 className="text-md pb-2.5">Mentorship Programs</h2>
+          </div>
+          <div className="w-5/6 pl-4 text-gray-600">
+            <p className="mb-2.5">
+              When mentoring or teaching, I use engaging small projects to help kids, students, and juniors learn programming:
+            </p>
+            <ul className={"!list-disc pl-4 mb-2.5"}>
+              <li>Game Collection (Snake, Dino, AOTF): Introduces programming fundamentals with Pygame while encouraging them to handle edge cases to prevent bugs or cheating.</li>
+              <li>URL Shortener: Demonstrates web development concepts with FastAPI, including intensive read-write operations with Redis, worker processes with Dramatiq, and analytics derived from web requests.</li>
+              <li>AI Assistant: Teaches how to build a chat app using Next.js, incorporating conversation management with Postgres and Redis, prompt engineering, large language models (LLMs) with tool calling, and systems design.</li>
+            </ul>
           </div>
         </div>
         {/* Courses */}
