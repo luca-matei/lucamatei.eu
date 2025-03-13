@@ -93,14 +93,14 @@ export default function Resume() {
         </div>
         {workplaces.map((workplace, index) => (
           <div key={index} className={`flex flex-wrap pb-10 ${index == 1 ? "break-before-page" : ""}`}>
-            <div className="w-1/4 pr-4 text-sm">
+            <div className="w-1/4 pr-4">
               <h2 className="text-md pb-2.5">{workplace.role}</h2>
-              <h2 className="text-gray-600">{workplace.company}</h2>
-              <h2 className="text-gray-600 whitespace-nowrap">{workplace.period}</h2>
-              <h2 className="text-gray-600">{workplace.type}</h2>
-              <h2 className="pb-2.5 text-gray-600">{workplace.location}</h2>
+              <h2 className="text-sm text-gray-600">{workplace.company}</h2>
+              <h2 className="text-sm text-gray-600 whitespace-nowrap">{workplace.period}</h2>
+              <h2 className="text-sm text-gray-600">{workplace.type}</h2>
+              <h2 className="text-sm pb-2.5 text-gray-600">{workplace.location}</h2>
               <hr/>
-              <h2 className="py-2.5 text-gray-600">{workplace.tech_stack}</h2>
+              <h2 className="text-sm py-2.5 text-gray-600">{workplace.tech_stack}</h2>
             </div>
             <div className="w-3/4 pl-4 text-gray-600">
               <p className="mb-2.5">{workplace.description}</p>
