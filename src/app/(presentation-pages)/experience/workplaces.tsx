@@ -46,7 +46,7 @@ export const workplaces = [
   {
     company: '',
     role: 'Software Engineer and Consultant',
-    period: `Jun 2023 - Present · ${getElapsedPeriod('June 2023')}`,
+    period: `Jun 2023 - ${getPresentDate()} · ${getElapsedPeriod('June 2023')}`,
     type: 'Remote, Self-employed',
     location: 'European Economic Area',
     description: "Helped startups create cost-effective and performant e-commerce products, coached junior developers to build a strong foundation in software development, contributed to and authored open-source projects and documentation,and started my entrepreneurial journey in local markets.",
