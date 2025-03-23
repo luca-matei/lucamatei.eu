@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`{inter.className} h-full`}>
+      <body className={`${inter.className} h-full`}>
         {children}
         <ToastContainer stacked={true} limit={3} position="bottom-right" />
       </body>
