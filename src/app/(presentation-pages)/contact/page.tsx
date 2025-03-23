@@ -1,6 +1,4 @@
+
 export default function Contact() {
-  return (
-    <>
-    </>
-  );
+  return (<></>);
 }
