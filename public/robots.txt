@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lucamatei.eu
+
+# Sitemaps
+Sitemap: https://lucamatei.eu/sitemap.xml
