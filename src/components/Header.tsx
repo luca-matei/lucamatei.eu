@@ -47,9 +47,6 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden md:flex md:flex-1 md:justify-end">
-          <a href={"/dear-recruiters"} className="px-2 text-sm text-right font-semibold leading-6 text-gray-900 border-r border-gray-900/10">
-            Dear Recruiters
-          </a>
           <a href="/luca-matei-resume-en.pdf" className="whitespace-nowrap px-2 text-sm font-semibold leading-6 text-gray-900">
             Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
           </a>
@@ -85,11 +82,6 @@ export default function Header() {
                 ))}
               </div>
               <div className="py-6">
-                <a href={"/dear-recruiters"}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Dear Recruiters
-                </a>
                 <a
                   href="/luca-matei-resume-en.pdf"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
