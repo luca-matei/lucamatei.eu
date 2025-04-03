@@ -152,8 +152,8 @@ export default function Resume() {
             </ul>
           </div>
         </div>
-        {/* Courses */}
-        <div className="flex flex-wrap pb-2">
+        {/* Education */}
+        <div className="flex flex-wrap pb-2 break-before-page">
           <div className="w-1/6 pr-4">
             <h2 className="text-xl font-bold">Education</h2>
           </div>

@@ -89,10 +89,9 @@ export const workplaces = [
     description: "Helped students learn procedural programming using C++ and Python. Wrote setup guides for various software tools.",
     references: [],
     bullets: [
-      "Created configuration guides for over 10 software products and systems",
-      "Ran web development workshops for 25+ students twice a week for 3 months",
-      "Tutored 15+ students in procedural programming",
-      "Helped build websites for a high school and local bakery",
+      "Created configuration guides for over 10 software products",
+      "Ran web development workshops for 25+ students twice a week",
+      "Tutored 15+ students in web development and procedural programming",
       "Built dozens of websites, blogs, galleries in Flask, Django and bottle.py with Bootstrap, jQuery, and vanilla JS, HTML, CSS",
       "Built software for DevOps, networking and security products"
     ],
