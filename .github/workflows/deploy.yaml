@@ -37,7 +37,4 @@ jobs:
           
           /bin/bash build.sh
 
-          yarn install
-          yarn build
-
           sudo systemctl restart ${{ vars.APP_NAME }}

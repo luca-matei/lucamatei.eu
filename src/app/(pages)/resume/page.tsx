@@ -64,7 +64,7 @@ export default function Resume() {
             <h2 className="text-xl font-bold">Summary</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-2">Experienced impact-driven engineer specializing in B2B startup environments. Creator of open-source IaC tool, WSGI web framework, and utility-first CSS library. Authored technical guides for various software products. Proficient in Python, TypeScript, and Linux. Mentor for students and junior developers in procedural programming, web development, and LLMs. Open-source contributor to Pydantic. Built high-throughput e-commerce products in global, agile teams. Certified ScrumMaster with multiple Coursera certifications in full-stack development, AI, and Rust. Pursuing AWS certification.</p>
+            <p className="mt-2">Seasoned impact-driven engineer with over 8 years of experience, recently collaborating with SaaS startups on a B2B basis. Designed and built high-traffic solutions while leading system development for AI-driven and scraping-based e-commerce products across global, agile teams. Creator of open-source IaC tool, WSGI web framework, and utility-first CSS library. Authored technical guides for a wide array of DevOps, networking and cybersecurity software. Guided students and junior developers in LLMs, web and game development, and procedural programming. Open-source contributor to Pydantic.</p>
           </div>
         </div>
         <div className="flex flex-wrap pb-2">
@@ -72,7 +72,7 @@ export default function Resume() {
             <h2 className="text-md">Desired roles</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-0.5">Senior / Middle Full Stack Engineer or Software Engineer</p>
+            <p className="mt-0.5">Senior / Middle Full Stack Engineer or Python Developer</p>
           </div>
         </div>
         <div className="flex flex-wrap pb-10">
@@ -80,7 +80,7 @@ export default function Resume() {
             <h2 className="text-md">Tech Stack</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-0.5">Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Shopify, Linux</p>
+            <p className="mt-0.5">Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Docker, Linux</p>
           </div>
         </div>
         {/* Experience */}
@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
         </div>
         {workplaces.map((workplace, index) => (
-          <div key={index} className={`flex flex-wrap pb-10 ${index == 1 ? "break-before-page" : ""}`}>
+          <div key={index} className={`flex flex-wrap pb-10`}>
             <div className="w-1/4 pr-4">
               <h2 className="text-md pb-2.5">{workplace.role}</h2>
               <h2 className="text-sm text-gray-600">{workplace.company}</h2>
@@ -103,7 +103,6 @@ export default function Resume() {
               <h2 className="text-sm py-2.5 text-gray-600">{workplace.tech_stack}</h2>
             </div>
             <div className="w-3/4 pl-4 text-gray-600">
-              <p className="mb-2.5">{workplace.description}</p>
               <ul className="!list-disc pl-4 mb-2.5">
                 {workplace.bullets.map((bullet, index2) => (
                   <li key={index + 5 * index2}>{bullet}</li>

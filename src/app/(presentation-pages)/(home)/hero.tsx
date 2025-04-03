@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
+import {PROFESSIONAL_YEARS} from "@/constants";
 
 export default function Hero() {
   const content = {
@@ -7,7 +8,7 @@ export default function Hero() {
     title: () => {
       return <>Hi, I&apos;m Luca,<br /><span className="text-indigo-600">Senior Full Stack Engineer</span></>
     },
-    description: "Experienced impact-driven engineer specializing in B2B startup environments. Creator of open-source IaC tool, WSGI web framework, and utility-first CSS library. Authored technical guides for various software products. Proficient in Python, TypeScript, and Linux. Mentor for students and junior developers in procedural programming, web development, and LLMs. Open-source contributor to Pydantic. Built high-throughput e-commerce products in global, agile teams. Certified ScrumMaster with multiple Coursera certifications in full-stack development, AI, and Rust. Pursuing AWS certification.",
+    description: `Seasoned impact-driven engineer with over ${PROFESSIONAL_YEARS} years of experience, recently collaborating with SaaS startups on a B2B basis. Designed and built high-traffic solutions while leading system development for AI-driven and scraping-based e-commerce products across global, agile teams. Creator of open-source IaC tool, WSGI web framework, and utility-first CSS library. Authored technical guides for a wide array of DevOps, networking and cybersecurity software. Guided students and junior developers in LLMs, web and game development, and procedural programming. Open-source contributor to Pydantic.`,
   }
 
   return (

@@ -1,3 +1,5 @@
+import {PROFESSIONAL_YEARS} from "@/constants";
+
 interface PageHeadProps {
   title?: string;
   description?: string;
@@ -8,7 +10,7 @@ interface PageHeadProps {
 export default function generatePageMetadata(
   {
     title = "Senior Full Stack Engineer",
-    description = "Experienced impact-driven engineer specializing in B2B startup environments. Creator of open-source IaC tool, WSGI web framework, and utility-first CSS library.",
+    description = `Seasoned impact-driven engineer with over ${PROFESSIONAL_YEARS} years of experience, recently collaborating with SaaS startups on a B2B basis. Designed and built high-traffic solutions while leading system development for AI-driven and scraping-based e-commerce products across global, agile teams.`,
     imagePath = "/profile-picture.png",
     path
   }: PageHeadProps

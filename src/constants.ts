@@ -8,3 +8,4 @@ export const PHONE_NUMBER = "+40 771 344 046";
 export const EMAIL = "hello@lucamatei.eu";
 export const LOCATION = "Rotterdam, South Holland, Netherlands";
 export const PROGRAMMING_YEARS = getCurrentYear() - 2011;
+export const PROFESSIONAL_YEARS = getCurrentYear() - 2017;
