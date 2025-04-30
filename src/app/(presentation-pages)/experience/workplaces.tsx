@@ -38,7 +38,7 @@ export const workplaces = [
       "Shopify Integration: Created a custom Shopify block for store integration and built pipelines to handle real-time updates for over 6,000 products and 150,000+ daily transactions across multiple stores.",
       "Scalability: Designed a user rollout system with geo-filtering and planned solutions for custom client requirements during onboarding.",
       "Testing and CI/CD: Created the first unit test suite and CI/CD pipeline to validate pull requests before merging.",
-      "Team Coordination: Occasionally led daily meetings, coordinated 2-3 developers on projects, and managed production deployments.",
+      "Team Coordination: Worked closely with RevOps team to align business and software goals. Occasionally led daily meetings, coordinated 2-3 developers on projects, and managed production deployments.",
       "Documentation and Modularity: Reduced development time through modular architecture and improved onboarding with detailed documentation.",
       "Technical Support: Acted as the go-to engineer for resolving critical issues and implementing new features.",
     ],

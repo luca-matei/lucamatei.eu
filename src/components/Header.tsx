@@ -22,6 +22,7 @@ export default function Header() {
 
   return (
     <header className="fixed bg-white ring-1 ring-gray-900/10 inset-x-0 top-0 z-50 print:hidden">
+      {/* Desktop menu */}
       <nav className="flex items-center justify-between p-4 md:px-8 max-w-7xl mx-auto" aria-label="Global">
         <div className="flex md:flex-1">
         </div>
@@ -47,11 +48,12 @@ export default function Header() {
           ))}
         </div>
         <div className="hidden md:flex md:flex-1 md:justify-end">
-          <a href="/luca-matei-resume-en.pdf" className="whitespace-nowrap px-2 text-sm font-semibold leading-6 text-gray-900">
+          <a href="/luca-matei-resume-en.pdf" className="whitespace-nowrap px-4 py-2 text-sm font-semibold leading-6 text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors">
             Resume<FontAwesomeIcon icon={faCloudArrowDown} className="inline ml-2 h-4 w-4" aria-hidden="true"/>
           </a>
         </div>
       </nav>
+      {/* Mobile menu */}
       <Dialog as="div" className="md:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50"/>
         <Dialog.Panel
