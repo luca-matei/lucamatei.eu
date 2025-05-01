@@ -1,5 +1,5 @@
 import Debugging from './debugging.mdx';
-import {BlogPost} from "@/app/(pages)/blog/MasonryLayout";
+import {BlogPost} from "@/app/(with-footer)/blog/MasonryLayout";
 
 export const BLOG_POSTS: BlogPost[] = [
   {

@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faGlobe, faMapMarkerAlt, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
-import {workplaces} from "@/app/(presentation-pages)/experience/workplaces";
+import {workplaces} from "@/app/(with-contact)/experience/workplaces";
 import {
   EMAIL,
   GITHUB_URL,

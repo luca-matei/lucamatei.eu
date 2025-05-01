@@ -3,7 +3,7 @@ import {toast} from "react-toastify";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
-import CalBanner from "@/app/(presentation-pages)/contact/CalBanner";
+import CalBanner from "@/app/(with-contact)/contact/CalBanner";
 import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
 import {getCurrentYear} from "@/utils";
 import Footer from "@/components/Footer";

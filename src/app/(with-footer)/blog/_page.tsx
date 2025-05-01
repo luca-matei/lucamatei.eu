@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import MasonryLayout from "@/app/(pages)/blog/MasonryLayout";
+import MasonryLayout from "@/app/(with-footer)/blog/MasonryLayout";
 import {BLOG_POSTS} from "@/blog-posts/BlogPosts";
 
 export default function Blog() {
