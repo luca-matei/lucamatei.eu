@@ -88,10 +88,34 @@ export default function Testimonials() {
       setTruncatedTexts(newTruncatedTexts);
     };
 
+    const handleScroll = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
+        const cardWidth = 400; // Width of each card
+        const gap = 32; // gap-8 = 2rem = 32px
+        const scrollPosition = container.scrollLeft;
+        const newIndex = Math.round(scrollPosition / (cardWidth + gap));
+        if (newIndex !== currentIndex) {
+          setCurrentIndex(newIndex);
+        }
+      }
+    };
+
     checkTruncation();
     window.addEventListener('resize', checkTruncation);
-    return () => window.removeEventListener('resize', checkTruncation);
-  }, []);
+    
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    }
+    
+    return () => {
+      window.removeEventListener('resize', checkTruncation);
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [currentIndex]);
 
   const scrollToIndex = (index: number) => {
     if (scrollContainerRef.current) {
@@ -125,103 +149,110 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonials</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What others say about my work
-          </p>
-        </div>
-        
-        <div className="relative mt-16">
-          <div 
-            ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-8 pb-8 pt-4 scrollbar-hide px-12"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {testimonials.map((testimonial) => (
-              <div 
-                key={testimonial.name} 
-                className="flex-shrink-0 w-[400px]"
-              >
-                <div className="flex flex-col justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-gray-300 h-full">
-                  <div>
-                    <div className="flex w-full justify-between">
-                      <div>
-                        <div className="font-semibold text-lg">{testimonial.name}</div>
-                        <div className="text-gray-600">{testimonial.role}</div>
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Left side - Title and description */}
+          <div className="lg:w-1/3">
+            <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonials</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              See what clients say about my work
+            </p>
+            <p className="mt-4 text-gray-600">
+              From startup founders to fellow developers, these are the stories of successful collaborations and the impact we've created together.
+            </p>
+          </div>
+
+          {/* Right side - Scrollable cards */}
+          <div className="lg:w-2/3 relative">
+            <div 
+              ref={scrollContainerRef}
+              className="flex overflow-x-auto gap-8 pb-8 pt-4 px-[1px] scrollbar-hide lg:mr-[-50vw] lg:pr-[50vw]"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div 
+                  key={testimonial.name} 
+                  className={`flex-shrink-0 w-[400px] ${index === 0 ? 'lg:pl-4' : ''}`}
+                >
+                  <div className="flex flex-col justify-between rounded-2xl bg-white p-8 ring-1 ring-gray-200 hover:ring-gray-300 h-full">
+                    <div>
+                      <div className="flex w-full justify-between">
+                        <div>
+                          <div className="font-semibold text-lg">{testimonial.name}</div>
+                          <div className="text-gray-600">{testimonial.role}</div>
+                        </div>
+                        <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C4A267] hover:text-[#B38F5A]">
+                          <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
+                        </a>
                       </div>
-                      <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#C4A267] hover:text-[#B38F5A]">
-                        <FontAwesomeIcon icon={faLinkedin} className="h-5 w-5" />
-                      </a>
-                    </div>
-                    <div className="mt-1 text-xs text-indigo-600">{testimonial.relation}</div>
-                    <div className="mt-4 text-gray-700 leading-normal text-base">
-                      <div 
-                        className="testimonial-text line-clamp-6"
-                        data-name={testimonial.name}
-                      >
-                        {formatText(testimonial.text)}
-                      </div>
-                      {truncatedTexts[testimonial.name] && (
-                        <button
-                          onClick={() => openModal(testimonial)}
-                          className="mt-2 text-indigo-600 hover:text-indigo-500 text-sm font-medium"
+                      <div className="mt-1 text-xs text-indigo-600">{testimonial.relation}</div>
+                      <div className="mt-4 text-gray-700 leading-normal text-base">
+                        <div 
+                          className="testimonial-text line-clamp-6"
+                          data-name={testimonial.name}
                         >
-                          Read more
-                        </button>
-                      )}
+                          {formatText(testimonial.text)}
+                        </div>
+                        {truncatedTexts[testimonial.name] && (
+                          <button
+                            onClick={() => openModal(testimonial)}
+                            className="mt-2 text-indigo-600 hover:text-indigo-500 text-sm font-medium"
+                          >
+                            Read more
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <button
-              onClick={() => scrollToIndex(Math.max(0, currentIndex - 1))}
-              className="bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50"
-              aria-label="Previous"
-            >
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => scrollToIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-indigo-600' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
               ))}
             </div>
 
-            <button
-              onClick={() => scrollToIndex(Math.min(testimonials.length - 1, currentIndex + 1))}
-              className="bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50"
-              aria-label="Next"
-            >
-              <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+            {/* Navigation Controls */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => scrollToIndex(Math.max(0, currentIndex - 1))}
+                className="bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50"
+                aria-label="Previous"
+              >
+                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <div className="flex gap-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => scrollToIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                      index === currentIndex ? 'bg-indigo-600' : 'bg-gray-300'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={() => scrollToIndex(Math.min(testimonials.length - 1, currentIndex + 1))}
+                className="bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50"
+                aria-label="Next"
+              >
+                <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Trusted By Section */}
-        <div className="mt-24">
+        <div className="mx-auto mt-16">
           <h2 className="text-lg font-semibold leading-8 tracking-tight text-indigo-600 text-center">Trusted By</h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-3 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            <div className="flex flex-col items-center gap-2">
-              <div className="relative h-12 w-32">
+          <div className="mx-auto mt-6 grid max-w-lg grid-cols-2 items-center gap-x-4 gap-y-6 sm:max-w-xl sm:grid-cols-4 sm:gap-x-6 lg:mx-0 lg:max-w-none">
+            <div className="flex flex-col items-center gap-1">
+              <div className="relative h-10 w-28">
                 <Image
                   src="/logos/getitai.png"
                   alt="getitAI"
@@ -229,10 +260,10 @@ export default function Testimonials() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-gray-500">getitAI</span>
+              <span className="text-xs text-gray-500">getitAI</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="relative h-12 w-32">
+            <div className="flex flex-col items-center gap-1">
+              <div className="relative h-10 w-28">
                 <Image
                   src="/logos/pydantic.jpg"
                   alt="Pydantic"
@@ -240,19 +271,19 @@ export default function Testimonials() {
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-gray-500">Pydantic</span>
+              <span className="text-xs text-gray-500">Pydantic</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center h-12 w-32">
-                <span className="text-2xl font-bold text-gray-900">50+</span>
+            <div className="flex flex-col items-center gap-1">
+              <div className="flex items-center justify-center h-10 w-28">
+                <span className="text-xl font-bold text-gray-900">50+</span>
               </div>
-              <span className="text-sm text-gray-500">Students & Developers</span>
+              <span className="text-xs text-gray-500">Students & Developers</span>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center h-12 w-32">
-                <span className="text-2xl font-bold text-gray-900">12+</span>
+            <div className="flex flex-col items-center gap-1">
+              <div className="flex items-center justify-center h-10 w-28">
+                <span className="text-xl font-bold text-gray-900">12+</span>
               </div>
-              <span className="text-sm text-gray-500">Companies</span>
+              <span className="text-xs text-gray-500">Companies</span>
             </div>
           </div>
         </div>
