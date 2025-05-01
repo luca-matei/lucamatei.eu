@@ -159,7 +159,7 @@ export default function Testimonials() {
               See what clients say about my work
             </p>
             <p className="mt-4 text-gray-600">
-              From startup founders to fellow developers, these are the stories of successful collaborations and the impact we've created together.
+              From startup founders to fellow developers, these are the stories of successful collaborations and the impact we&apos;ve created together.
             </p>
           </div>
 
