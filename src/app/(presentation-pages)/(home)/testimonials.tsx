@@ -94,8 +94,13 @@ export default function Testimonials() {
         const cardWidth = 400; // Width of each card
         const gap = 32; // gap-8 = 2rem = 32px
         const scrollPosition = container.scrollLeft;
+        const maxScroll = container.scrollWidth - container.clientWidth;
         const newIndex = Math.round(scrollPosition / (cardWidth + gap));
-        if (newIndex !== currentIndex) {
+        
+        // If we're at the maximum scroll position, select the last index
+        if (Math.abs(scrollPosition - maxScroll) < 10) {
+          setCurrentIndex(testimonials.length - 1);
+        } else if (newIndex !== currentIndex) {
           setCurrentIndex(newIndex);
         }
       }
