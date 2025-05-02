@@ -8,7 +8,8 @@ import {
   faArrowRight, 
   faDatabase, 
   faServer,
-  faExternalLinkAlt 
+  faExternalLinkAlt, 
+  faLaptopCode
 } from '@fortawesome/free-solid-svg-icons';
 import { CAL_URL, GITHUB_URL } from '@/constants';
 
@@ -43,7 +44,7 @@ const projects = [
   {
     title: 'eBloc',
     description: 'A digital platform for Romanian apartment buildings that simplifies utility meter management, report generation, and invoicing processes. It offers consumption analysis tools while enabling direct communication between residents and building administrators.',
-    icon: faDatabase,
+    icon: faLaptopCode,
     image: '/projects/ebloc.jpg',
     link: 'https://demo.ebloc.app',
     linkText: 'Try Demo',
@@ -71,9 +72,11 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="mx-auto max-w-[96rem] px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div className="mx-auto max-w-2xl lg:mx-0">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-6">Projects</h2>
+      </div>
+      <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -90,7 +93,7 @@ export default function ProjectsPage() {
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-50 rounded-lg mr-4">
-                  <FontAwesomeIcon icon={project.icon} className="w-6 h-6 text-blue-600" />
+                  <FontAwesomeIcon icon={project.icon} className="w-5 h-5 text-blue-600" />
                 </div>
                 <h2 className="text-xl font-semibold text-gray-900">{project.title}</h2>
               </div>
@@ -103,9 +106,9 @@ export default function ProjectsPage() {
               >
                 {project.linkText}
                 {project.isExternal ? (
-                  <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3 h-3 ml-1" />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3 h-3 ml-2" />
                 ) : (
-                  <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3 ml-1" />
+                  <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3 ml-2" />
                 )}
               </Link>
             </div>
