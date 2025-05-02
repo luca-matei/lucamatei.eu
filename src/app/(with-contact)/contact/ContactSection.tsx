@@ -3,7 +3,7 @@ import {toast} from "react-toastify";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faMapPin, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faLinkedin, faTelegram} from "@fortawesome/free-brands-svg-icons";
-import CalBanner from "@/app/(with-contact)/contact/CalBanner";
+import {faUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 import {EMAIL, GITHUB_URL, LINKEDIN_URL, LOCATION, PHONE_NUMBER, TELEGRAM_URL} from "@/constants";
 import {getCurrentYear} from "@/utils";
 import Footer from "@/components/Footer";
@@ -146,7 +146,18 @@ export function ContactSection() {
         </div>
         <form onSubmit={handleSubmit} className="px-6 lg:px-8 pt-12 lg:pt-40">
           <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
-            <CalBanner />
+            <div className="flex flex-col sm:flex-row space-y-3.5 sm:space-y-0 justify-between items-center p-3.5 mb-5 bg-indigo-600 text-white rounded-md shadow-sm">
+              <span className="font-bold block">Longer than an email?</span>
+              <a 
+                href="https://cal.com/lucamatei/quick-chat" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-white text-sm text-indigo-600 font-semibold py-2 px-4 rounded-md shadow-sm hover:bg-indigo-50 flex items-center gap-1"
+              >
+                Schedule time with me
+                <FontAwesomeIcon icon={faUpRightFromSquare} className="h-3 w-3" />
+              </a>
+            </div>
             <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
               {/* First Name Field */}
               <div>
