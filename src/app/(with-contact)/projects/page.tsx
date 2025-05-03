@@ -41,6 +41,7 @@ const projects = [
     linkText: 'Try Project',
     isExternal: true,
   },
+  /*
   {
     title: 'eBloc',
     description: 'A digital platform for Romanian apartment buildings that simplifies utility meter management, report generation, and invoicing processes. It offers consumption analysis tools while enabling direct communication between residents and building administrators.',
@@ -50,6 +51,7 @@ const projects = [
     linkText: 'Try Demo',
     isExternal: true,
   },
+  */
   {
     title: 'DIMA',
     description: 'A unified homelab management platform that handles web app deployment, VM provisioning, and network service configuration. This all-in-one solution simplifies infrastructure management with integrated DNS, DHCP, and web server controls.',
