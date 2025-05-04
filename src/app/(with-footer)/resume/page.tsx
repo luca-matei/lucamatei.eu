@@ -196,7 +196,7 @@ export default function Resume() {
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
             <ul className="list-none mt-0.5">
-              <li>Colegiul Național "Mihai Viteazul" București</li>
+              <li>Colegiul Național &quot;Mihai Viteazul&quot; București</li>
               <li>Mathematics and Computer Science</li>
             </ul>
           </div>
