@@ -7,12 +7,16 @@ const getElapsedPeriod = (startDate: string): string => {
   const now = new Date();
 
   const months = (now.getFullYear() - start.getFullYear()) * 12 +
-    (now.getMonth() - start.getMonth());
+    (now.getMonth() - start.getMonth()) + 1;
 
   const years = Math.floor(months / 12);
-  const remainingMonths = months % 12 + 1;
+  const remainingMonths = months % 12;
 
-  return `${years}yr ${remainingMonths}mos`;
+  if (remainingMonths === 0) {
+    return `${years}${years > 1 ? 'yrs' : 'yr'}`;
+  }
+  
+  return `${years}${years > 1 ? 'yrs' : 'yr'} ${remainingMonths}${remainingMonths > 1 ? 'mos' : 'mo'}`;
 };
 
 const getPresentDate = (): string => {

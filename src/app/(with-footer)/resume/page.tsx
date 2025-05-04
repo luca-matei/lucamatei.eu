@@ -16,7 +16,7 @@ export default function Resume() {
   return (
     <div className={"mt-24 py-4 px-6 w-full max-w-4xl mx-auto print:p-0 print:m-0"}>
       <div className={"aspect-[1/1.4142]"}>
-        <div className="flex flex-wrap pb-10">
+        <div className="flex flex-wrap pb-7">
           <div className="w-1/4 pr-4">
             <h2 className="sr-only">Resume of</h2>
             <h1 className="text-5xl font-bold">Luca Matei</h1>
@@ -75,7 +75,7 @@ export default function Resume() {
             <p className="mt-0.5">Senior / Middle Full Stack Engineer or Python Developer</p>
           </div>
         </div>
-        <div className="flex flex-wrap pb-10">
+        <div className="flex flex-wrap pb-7">
           <div className="w-1/6 pr-4">
             <h2 className="text-md">Tech Stack</h2>
           </div>
@@ -92,7 +92,7 @@ export default function Resume() {
           </div>
         </div>
         {workplaces.map((workplace, index) => (
-          <div key={index} className={`flex flex-wrap pb-10`}>
+          <div key={index} className={`flex flex-wrap pb-7`}>
             <div className="w-1/4 pr-4">
               <h2 className="text-md pb-2.5">{workplace.role}</h2>
               <h2 className="text-sm text-gray-600">{workplace.company}</h2>
@@ -112,17 +112,20 @@ export default function Resume() {
           </div>
         ))}
         {/* Projects */}
-        <div className="flex flex-wrap pb-2 break-before-page">
+        <div className="flex flex-wrap pb-2">
           <div className="w-1/6 pr-4">
             <h2 className="text-xl font-bold">Projects</h2>
           </div>
+          <div className="w-5/6 pl-4 text-gray-600">
+            <p className="mt-1">Available on <a href="https://lucamatei.eu/projects" className="text-blue">lucamatei.eu/projects</a>.</p>
+          </div>
         </div>
-        <div className="flex flex-wrap pb-10">
+        <div className="flex flex-wrap pb-7">
           <div className="w-1/6 pr-4">
             <h2 className="text-md pb-2.5">Digital Marmot / Dima</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mb-2.5">
+            <p>
               <i>
                 This project was developed before the use of large language models in programming and before I discovered Ansible and TailwindCSS.<br/>
               </i>
@@ -137,28 +140,43 @@ export default function Resume() {
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap pb-10">
+        <div className="flex flex-wrap pb-7">
+          <div className="w-1/6 pr-4">
+            <h2 className="text-md pb-2.5">OSRAM Products Redis RAG</h2>
+          </div>
+          <div className="w-5/6 pl-4 text-gray-600">
+            <p>
+            This conversational interface uses a Redis-powered RAG to search and present technical information from OSRAM product specification PDFs. The hybrid search system presents complex document data in a natural, chat-based format, making product specifications instantly accessible to users.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap pb-7">
+          <div className="w-1/6 pr-4">
+            <h2 className="text-md pb-2.5">#PayWhatYou-ThinkItsWorth</h2>
+          </div>
+          <div className="w-5/6 pl-4 text-gray-600">
+            <p>
+              I offer personalized software consultancy services for projects, career guidance, and startup planning with a unique value-based pricing model. You determine what to pay based on the tangible impact our session creates for you. My client-first approach ensures you only invest what matches the value you receive.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap pb-7">
           <div className="w-1/6 pr-4">
             <h2 className="text-md pb-2.5">Mentorship Programs</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mb-2.5">
-              When mentoring or teaching, I use engaging small projects to help kids, students, and juniors learn programming:
+            <p>
+              I teach hands-on programming and web development projects to help students and junior developers master essential skills. My interactive portfolio includes games like Snake and Hangman, practical tools such as Password Managers, and full-stack applications like URL Shorteners with API integration.
             </p>
-            <ul className={"!list-disc pl-4 mb-2.5"}>
-              <li>Game Collection (Snake, Dino, AOTF): Introduces programming fundamentals with Pygame while encouraging them to handle edge cases to prevent bugs or cheating.</li>
-              <li>URL Shortener: Demonstrates web development concepts with FastAPI, including intensive read-write operations with Redis, worker processes with Dramatiq, and analytics derived from web requests.</li>
-              <li>AI Assistant: Teaches how to build a chat app using Next.js, incorporating conversation management with Postgres and Redis, prompt engineering, large language models (LLMs) with tool calling, and systems design.</li>
-            </ul>
           </div>
         </div>
         {/* Education */}
-        <div className="flex flex-wrap pb-2 break-before-page">
+        <div className="flex flex-wrap pb-2">
           <div className="w-1/6 pr-4">
             <h2 className="text-xl font-bold">Education</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-2">Self-taught programming for {PROGRAMMING_YEARS} years.</p>
+            <p className="mt-1">Self-taught programming for {PROGRAMMING_YEARS} years.</p>
           </div>
         </div>
         <div className="flex flex-wrap pb-6">
@@ -169,6 +187,17 @@ export default function Resume() {
             <ul className="list-none mt-0.5">
               <li>Certified Scrum Master through Scrum Alliance</li>
               <li>Accountant through APSAP (Romania)</li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-wrap pb-6">
+          <div className="w-1/6 pr-4">
+            <h2 className="text-md">High School</h2>
+          </div>
+          <div className="w-5/6 pl-4 text-gray-600">
+            <ul className="list-none mt-0.5">
+              <li>Colegiul Național "Mihai Viteazul" București</li>
+              <li>Mathematics and Computer Science</li>
             </ul>
           </div>
         </div>
