@@ -8,8 +8,15 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    name: "Patrick Lauber",
+    role: "getitAI Founder, Django CMS Creator",
+    linkedin: "https://www.linkedin.com/in/patricklauber",
+    relation: "Patrick managed Luca directly",
+    text: `Should Luca apply to a job at your company, you would be stupid not to hire him!`
+  },
+  {
     name: "Lio Mendonça",
-    role: "Founder",
+    role: "getitAI Founder",
     linkedin: "https://www.linkedin.com/in/lio-mendonca",
     relation: "Lio managed Luca directly",
     text: `Luca Matei is an absolutely exceptional fullstack developer, and one of the most capable and reliable professionals I've had the pleasure to work with. His technical depth, particularly in Python, is outstanding—and he consistently pushes the boundaries of what's possible, delivering innovative and high-impact solutions.
