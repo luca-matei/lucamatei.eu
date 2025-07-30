@@ -9,7 +9,6 @@ import {
   faDatabase, 
   faServer,
   faExternalLinkAlt, 
-  faLaptopCode
 } from '@fortawesome/free-solid-svg-icons';
 import { CAL_URL, GITHUB_URL } from '@/constants';
 

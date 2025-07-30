@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCheck, faExternalLink} from "@fortawesome/free-solid-svg-icons";
+import {faCheck} from "@fortawesome/free-solid-svg-icons";
 import ExternalLink from "@/components/ExternalLink";
 
 const getElapsedPeriod = (startDate: string): string => {

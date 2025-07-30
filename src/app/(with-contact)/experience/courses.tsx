@@ -68,7 +68,7 @@ const courses = [
   },
 ]
 
-function classNames(...classes: any[]) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ")
 }
 
@@ -137,7 +137,7 @@ export default function Courses() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
             <ul role="list" className="divide-y divide-gray-100">
-              {courses.map((course, index) => (
+              {courses.map((course) => (
                   <Course key={course.id} {...course} />
               ))}
             </ul>

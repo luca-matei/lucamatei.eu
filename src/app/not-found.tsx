@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeftLong} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Error404() {
 return (
@@ -9,9 +10,9 @@ return (
         <p className="mt-6 text-base leading-7 text-gray-600">Sorry, we couldn’t find the page you’re looking
             for.</p>
         <div className="mt-10">
-            <a href="/" className="flex items-center text-sm font-semibold leading-7 text-indigo-600">
+            <Link href="/" className="flex items-center text-sm font-semibold leading-7 text-indigo-600">
                 <FontAwesomeIcon icon={faArrowLeftLong} className="h-3.5 mr-2" aria-hidden="true"/>Back to home
-            </a>
+            </Link>
         </div>
     </main>
 )
