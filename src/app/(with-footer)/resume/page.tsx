@@ -72,7 +72,7 @@ export default function Resume() {
             <h2 className="text-md">Desired roles</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-0.5">Senior / Middle Full Stack Engineer or Python Developer</p>
+            <p className="mt-0.5">Senior / Middle AI Engineer or Full Stack Engineer</p>
           </div>
         </div>
         <div className="flex flex-wrap pb-7">
@@ -80,7 +80,7 @@ export default function Resume() {
             <h2 className="text-md">Tech Stack</h2>
           </div>
           <div className="w-5/6 pl-4 text-gray-600">
-            <p className="mt-0.5">Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Docker, Linux</p>
+            <p className="mt-0.5">Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, AWS, Linux</p>
           </div>
         </div>
         {/* Experience */}
@@ -99,8 +99,11 @@ export default function Resume() {
               <h2 className="text-sm text-gray-600 whitespace-nowrap">{workplace.period}</h2>
               <h2 className="text-sm text-gray-600">{workplace.type}</h2>
               <h2 className="text-sm pb-2.5 text-gray-600">{workplace.location}</h2>
-              <hr/>
-              <h2 className="text-sm py-2.5 text-gray-600">{workplace.tech_stack}</h2>
+              {workplace.tech_stack && <>
+                <div className="h-[1px] border-b border-gray-200 my-1"/>
+                <h2 className="text-sm py-2.5 text-gray-600">{workplace.tech_stack}</h2>
+              </>
+              }
             </div>
             <div className="w-3/4 pl-4 text-gray-600">
               <ul className="!list-disc pl-4 mb-2.5">

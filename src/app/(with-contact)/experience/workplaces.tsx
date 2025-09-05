@@ -13,10 +13,10 @@ const getElapsedPeriod = (startDate: string): string => {
   const remainingMonths = months % 12;
 
   if (remainingMonths === 0) {
-    return `${years}${years > 1 ? 'yrs' : 'yr'}`;
+    return `${years}y`;
   }
   
-  return `${years}${years > 1 ? 'yrs' : 'yr'} ${remainingMonths}${remainingMonths > 1 ? 'mos' : 'mo'}`;
+  return `${years}y ${remainingMonths}mo`;
 };
 
 const getPresentDate = (): string => {
@@ -47,7 +47,7 @@ export const workplaces = [
   {
     company: 'getitAI, Inc.',
     role: 'Senior AI Engineer',
-    period: `Oct 2023 - May 2025 · 1yr 8mos`,
+    period: `Oct 2023 - May 2025 · 1y 8mo`,
     type: 'Remote, Contract',
     location: 'San Francisco, California, United States',
     references: [
@@ -70,7 +70,7 @@ export const workplaces = [
   {
     company: 'Signed NDA',
     role: 'Python Developer with DevOps',
-    period: 'Jul 2023 - Apr 2024 · 10mos',
+    period: 'Jul 2023 - Apr 2024 · 10mo',
     type: 'Remote, Contract',
     location: 'European Economic Area',
     description: "Quickly progressed to lead developer and architect role. Reconstructed critical API and infrastructure components to improve throughput and maintainability. Delivered new system version 2 months ahead of the 1-year contract schedule.",
@@ -87,7 +87,7 @@ export const workplaces = [
   {
     company: '',
     role: 'Python Developer with DevOps, Instructor',
-    period: 'Sep 2017 - Jun 2023 · 5yrs 10mos',
+    period: 'Sep 2017 - Jun 2023 · 5y 10mo',
     type: 'Hybrid, Freelance',
     location: 'Bucharest, Romania',
     description: "Helped students learn procedural programming using C++ and Python. Wrote setup guides for various software tools.",
@@ -99,7 +99,6 @@ export const workplaces = [
       "Built dozens of websites, blogs, galleries in Flask, Django and bottle.py with Bootstrap, jQuery, and vanilla JS, HTML, CSS",
       "Built software for DevOps, networking and security products"
     ],
-    tech_stack: "Python, C++",
   },
 ]
 

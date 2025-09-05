@@ -7,6 +7,6 @@ export const BLUESKY_URL = "@lucamatei.bsky.social";
 export const CAL_URL = "https://cal.com/lucamatei";
 export const PHONE_NUMBER = "+40 771 344 046";
 export const EMAIL = "hello@lucamatei.eu";
-export const LOCATION = "Bucharest, Romania";
+export const LOCATION = "Turnhout, Belgium";
 export const PROGRAMMING_YEARS = getCurrentYear() - 2011;
 export const PROFESSIONAL_YEARS = getCurrentYear() - 2017;
